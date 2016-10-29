@@ -33,6 +33,11 @@
     background: #FFAE2C;
   }
 
+  &--plate {
+    border-radius: 3px;
+    padding: 6px 10px 5px;
+  }
+
   &--flat {
     background: transparent;
     border: 2px solid;

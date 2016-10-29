@@ -200,6 +200,18 @@ body {
       }
     }
   }
+
+  &__content {
+    &--advanced {
+      display: none;
+      overflow: hidden;
+      
+      td {
+        padding-top: 0 !important;
+        color: rgba($secondary, .8);
+      }
+    }
+  }
 }
 
 .text-overflow {
@@ -213,6 +225,7 @@ body {
   background: #fff;
   border-radius: 4px;
   position: relative;
+  margin-bottom: 20px;
 
   .table-responsive {
     padding-left: 25px;
@@ -241,10 +254,6 @@ body {
       background: linear-gradient(to bottom,  #ff9100 0%,#ff0029 50%,#ab00ff 100%)!important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9100', endColorstr='#ab00ff',GradientType=1 )!important; /* IE6-9 */
     }
-  }
-
-  &__table {
-
   }
 
   &__title {
@@ -296,6 +305,18 @@ body {
   }
 }
 
+.open_hidden_content {
+  padding: 5px;
+  position: relative;
+  top: -1px;
+
+  &.active {
+    .caret {
+      @include rotate(180deg);
+    }
+  }
+}
+
 .colored_arrow {
   background: url(../img/be/colored-arrow.png) no-repeat center;
   width: 20px;
@@ -304,4 +325,18 @@ body {
   margin:  0 10px;
 
   @include background-size(20px 35px);
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 5px dashed;
+  border-top: 5px solid\9;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+
+  @include transition(all .2s ease);
 }
