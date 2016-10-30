@@ -910,7 +910,7 @@ hr.full { margin-left: 0; margin-right: 0; width: 100%; }
 .label--green { background: #13B72A; }
 .label--red { background: #FF3E2E; }
 .label--yellow { background: #FFAE2C; }
-.label--plate { border-radius: 3px; padding: 6px 10px 5px; }
+.label--plate { border-radius: 3px; padding: 6px 10px 5px; letter-spacing: 0.07em; }
 .label--flat { background: transparent; border: 2px solid; padding: 4px 10px 3px; letter-spacing: 0.07em; color: rgba(63, 77, 96, 0.35); }
 .label--flat:first-child { margin-left: 0; }
 .label--flat.label--blue { color: #0DA7FC; }
@@ -1135,6 +1135,7 @@ body { background: #F7F8F9; }
 .table--be_info.table tr td { padding-top: 9px; padding-bottom: 9px; }
 .table--be_info.table tr:hover { background: transparent; }
 .table--be_info.table tr:hover td, .table--be_info.table tr:hover th { background: transparent; }
+.table--text_big.table { font-size: 24px; }
 .table--transaction_view.table { font-size: 16px; }
 .table--transaction_view.table tr th { font-size: 18px; text-transform: none; color: #3F4D60; font-weight: normal; padding: 20px 30px 20px 0; letter-spacing: normal; }
 .table--transaction_view.table tr th:last-child { padding-right: 0; }
@@ -1145,13 +1146,20 @@ body { background: #F7F8F9; }
 .table--transaction_view.table tr:hover { background: transparent; }
 .table--transaction_view.table tr:hover td, .table--transaction_view.table tr:hover th { background: transparent; }
 .table--transaction_view.table .table__header ~ .table__header .transaction_view__title { padding-top: 20px; border-top: 1px solid #f0f0f0; }
+.table--asstes tr td, .table--asstes tr th { white-space: normal; }
+.table--asstes tr td:first-child, .table--asstes tr th:first-child { width: 10px !important; }
 .table__content--advanced { display: none; overflow: hidden; }
 .table__content--advanced td { padding-top: 0 !important; color: rgba(63, 77, 96, 0.8); }
+.table__header--main th { padding-bottom: 0 !important; }
+
+.text-small { font-size: 16px !important; }
+
+.text-muted { color: rgba(63, 77, 96, 0.6) !important; }
 
 .text-overflow { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
-.transaction_view { padding-left: 5px; background: #fff; border-radius: 4px; position: relative; margin-bottom: 20px; }
-.transaction_view .table-responsive { padding-left: 25px; padding-right: 30px; padding-bottom: 25px; }
+.transaction_view { padding-left: 5px; background: #fff; border-radius: 4px; position: relative; margin-bottom: 30px; }
+.transaction_view .table-responsive { padding-left: 25px; padding-right: 30px; padding-bottom: 25px; margin-bottom: 0; }
 .transaction_view:before { width: 2px; height: auto; content: ''; position: absolute; left: 2px; top: 2px; bottom: 2px; border-radius: 2px; background: rgba(63, 77, 96, 0.35); }
 .transaction_view--colored:before { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9100+0,ff0029+50,ab00ff+100 */ background: #ab00ff !important; /* Old browsers */ background: -moz-linear-gradient(top, #ff9100 0%, #ff0029 50%, #ab00ff 100%) !important; /* FF3.6-15 */ background: -webkit-linear-gradient(top, #ff9100 0%, #ff0029 50%, #ab00ff 100%) !important; /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, #ff9100 0%, #ff0029 50%, #ab00ff 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9100', endColorstr='#ab00ff',GradientType=1 ) !important; /* IE6-9 */ }
 .transaction_view__title { font-size: 14px !important; font-weight: 600 !important; text-transform: uppercase !important; letter-spacing: .1em !important; }
@@ -1167,9 +1175,13 @@ body { background: #F7F8F9; }
 .open_hidden_content { padding: 5px; position: relative; top: -1px; }
 .open_hidden_content.active .caret { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }
 
+.text-right { text-align: right !important; }
+
 .colored_arrow { background: url(../img/be/colored-arrow.png) no-repeat center; width: 20px; height: 35px; display: inline-block; margin: 0 10px; -webkit-background-size: 20px 35px; -moz-background-size: 20px 35px; -ms-background-size: 20px 35px; -o-background-size: 20px 35px; background-size: 20px 35px; }
 
 .caret { display: inline-block; width: 0; height: 0; margin-left: 2px; vertical-align: middle; border-top: 5px dashed; border-top: 5px solid\9; border-right: 5px solid transparent; border-left: 5px solid transparent; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -ms-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; }
+
+.img-thumbnail { margin-bottom: 30px; }
 
 @media (max-width: 539px) { .section--padding { padding: 45px 0 45px; }
   .grid { padding: 0; }

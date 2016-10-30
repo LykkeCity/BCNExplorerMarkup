@@ -149,6 +149,10 @@ body {
     }
   }
 
+  &--text_big.table {
+    font-size: 24px;
+  }
+
   &--transaction_view.table {
     font-size: 16px;
 
@@ -201,6 +205,18 @@ body {
     }
   }
 
+  &--asstes {
+    tr {
+      td, th {
+        white-space: normal;
+
+        &:first-child {
+          width: 10px !important;
+        }
+      }
+    }
+  }
+
   &__content {
     &--advanced {
       display: none;
@@ -212,6 +228,22 @@ body {
       }
     }
   }
+
+  &__header {
+    &--main {
+      th {
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+}
+
+.text-small {
+  font-size: 16px !important;
+}
+
+.text-muted {
+  color: rgba(63, 77, 96, 0.6) !important;
 }
 
 .text-overflow {
@@ -225,12 +257,13 @@ body {
   background: #fff;
   border-radius: 4px;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   .table-responsive {
     padding-left: 25px;
     padding-right: 30px;
     padding-bottom: 25px;
+    margin-bottom: 0;
   }
 
   &:before {
@@ -317,6 +350,10 @@ body {
   }
 }
 
+.text-right {
+  text-align: right !important;
+}
+
 .colored_arrow {
   background: url(../img/be/colored-arrow.png) no-repeat center;
   width: 20px;
@@ -339,4 +376,8 @@ body {
   border-left: 5px solid transparent;
 
   @include transition(all .2s ease);
+}
+
+.img-thumbnail {
+  margin-bottom: 30px;
 }
