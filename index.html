@@ -201,7 +201,7 @@
                 </td>
                 <td>
                   <div class="transaction_view__line">-0.0093</div>
-                  <div class="transaction_view__line">-0.002994 (11)<a href="#hidden1" class="open_hidden_content"><i class="caret"></i></a></div>
+                  <div class="transaction_view__line"><a href="#hidden1" class="open_hidden_content">-0.002994 (11)<i class="caret"></i></a></div>
                 </td>
                 <td class="transaction_view__arrow">
                   <div class="colored_arrow"></div>
@@ -286,7 +286,8 @@
 <script src="js/functions.js"></script>
 
 <script>
-  $('.open_hidden_content').on('click', function() {
+  $('.open_hidden_content').on('click', function(ev) {
+    ev.preventDefault();
     var $this = $(this), id = $this.attr('href')
 
     $this.toggleClass('active');

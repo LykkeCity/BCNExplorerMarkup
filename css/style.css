@@ -1179,7 +1179,7 @@ body { background: #F7F8F9; }
 
 .colored_arrow { background: url(../img/be/colored-arrow.png) no-repeat center; width: 20px; height: 35px; display: inline-block; margin: 0 10px; -webkit-background-size: 20px 35px; -moz-background-size: 20px 35px; -ms-background-size: 20px 35px; -o-background-size: 20px 35px; background-size: 20px 35px; }
 
-.caret { display: inline-block; width: 0; height: 0; margin-left: 2px; vertical-align: middle; border-top: 5px dashed; border-top: 5px solid\9; border-right: 5px solid transparent; border-left: 5px solid transparent; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -ms-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; }
+.caret { display: inline-block; width: 0; height: 0; margin-left: 6px; vertical-align: middle; border-top: 5px dashed; border-top: 5px solid\9; border-right: 5px solid transparent; border-left: 5px solid transparent; }
 
 .img-thumbnail { margin-bottom: 30px; }
 
