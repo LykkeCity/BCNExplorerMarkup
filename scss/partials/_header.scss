@@ -209,6 +209,10 @@ header {
     display: block;
     line-height: 50px;
     position: relative;
+
+    img {
+      vertical-align: top;
+    }
   }
 
   .nav--header {

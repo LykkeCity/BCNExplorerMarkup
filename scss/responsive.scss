@@ -232,11 +232,6 @@
   .collapse {
     height: 0;
     overflow: hidden;
-
-    &.in {
-      height: 100% !important;
-      height: calc(100% - 84px) !important;
-    }
   }
 
   .navbar-collapse {
@@ -325,6 +320,9 @@
       padding: 20px 20px 95px;
       display: block;
       visibility: visible;
+      top: 68px;
+      height: 100% !important;
+      height: calc(100% - 68px) !important;
 
       .nav {
         visibility: visible;
@@ -356,6 +354,10 @@
     .row>div {
       margin-bottom: 25px;
     }
+  }
+
+  .header {
+    padding: 14px 0;
   }
 
   .leading__right {
@@ -536,9 +538,13 @@
     }
   }
 
-  .collapse.in {
-    height: 100% !important;
-    height: calc(100% - 50px) !important;
+  .navbar-collapse {
+    top: 50px !important;
+
+    &.collapse.in {
+      height: 100% !important;
+      height: calc(100% - 50px) !important;
+    }
   }
 
   .header .btn--stroke {
