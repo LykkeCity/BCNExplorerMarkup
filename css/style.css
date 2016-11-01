@@ -3955,7 +3955,6 @@ body {
   margin-bottom: 30px; }
   @media all and (max-width: 991px) {
     .transaction_view {
-      margin-bottom: 30px;
       margin-right: -15px;
       padding-right: 20px; } }
   .transaction_view .table-responsive {
@@ -4004,7 +4003,7 @@ body {
     clear: both; }
   .transaction_view__row .transaction_view__line + .transaction_view__line {
     margin-top: 5px; }
-  .transaction_view__row + .transaction_view__row {
+  .transaction_view__row ~ .transaction_view__row {
     margin-top: 10px; }
   @media all and (min-width: 768px) {
     .transaction_view__row .transaction_view__line + .transaction_view__line {
