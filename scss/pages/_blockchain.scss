@@ -179,6 +179,10 @@ body {
         padding: 15px 15px 9px 0;
         border: 0;
         vertical-align: top;
+
+        &:nth-child(2) {
+          width: 555px;
+        }
       }
 
       a {
@@ -332,6 +336,7 @@ body {
   &__logo {
     vertical-align: top !important;
     border-right: 1px solid #DFE1E5 !important;
+    width: 60px !important;
 
     + td {
       padding-left: 15px !important;
@@ -403,4 +408,8 @@ body {
 
 .img-thumbnail {
   margin-bottom: 30px;
+}
+
+.hide-header .table__header--main{
+  display:none;
 }
