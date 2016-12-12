@@ -49,25 +49,11 @@ $(function() {
   });
 });
 
-$('[data-control="select"] ._value').text($(this).siblings('select').val());
-$('[data-control="select"] select').on('change', function() {
-  $(this).siblings('.select__value').find('._value').text(this.value);
-});
 
-$('.action_follow').on('click', function() {
-  $(this).toggleClass('active')
-})
+$('.open_hidden_content').on('click', function(ev) {
+  ev.preventDefault();
+  var $this = $(this), id = $this.attr('href');
 
-$(window).scroll(function() {
-  if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-    $('body').find('#launcher, .btn_feedback').css({
-      bottom: $('.footer').outerHeight()
-    })
-  }
-
-  else {
-    $('body').find('#launcher, .btn_feedback').css({
-      bottom: 0
-    })
-  }
+  $this.toggleClass('active');
+  $(id).slideToggle('fast');
 });

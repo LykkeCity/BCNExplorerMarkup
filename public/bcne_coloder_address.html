@@ -76,75 +76,128 @@
   </div>
 </header>
 
-<article class="content page">
+<article class="content page page--address">
   <div class="page_border"></div>
 
   <section class="section section--padding">
-    <div class="container ">
-
+    <div class="container">
       <div class="page__header">
-        <h2 class="page__title">Block 437213</h2>
-        <div class="address_code address_code--lead">
-          <span class="truncate"
-                title="0000000000000000009fcf515c6d412ecd11f3c82190458b380c8fb2a6150c99"
-                data-content-start="0000000000000000009fcf515c6d412e"
-                data-content-end="cd11f3c82190458b380c8fb2a6150c99"
-          ></span>
-          <button class="btn btn--icon copy_code" type="button" title="Copy code">
-            <i class="icon icon--copy"></i>
-            <span class="visible-xs-inline-block">Copy code</span>
-          </button>
+        <div class="row">
+          <div class="col-xs-3 hidden-xs pull-right">
+            <div class="address_qrcode">
+              <img src="img/be/qrcode.png" alt="Bitcoin" width="140">
+            </div>
+          </div>
+          <div class="col-sm-9">
+            <h2 class="page__title">Bitcoin Address</h2>
+            <div class="address_code address_code--lead">
+              <span class="truncate"
+                    title="2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw"
+                    data-content-start="2NAmtRw32LvymjsC"
+                    data-content-end="x1Wdo8i42v49U6tHDEw"
+              ></span>
+              <button class="btn btn--icon copy_code" type="button" title="Copy code">
+                <i class="icon icon--copy"></i>
+                <span class="visible-xs-inline-block">Copy code</span>
+              </button>
+            </div>
+            <p class="text-muted">Bitcoin Address: <a href="">2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw </a></p>
+          </div>
         </div>
-
-        <p class="text-muted">Previous block: <a href="">437212</a><span class="middot">&middot;</span>Next block: <a href="">437214</a></p>
       </div>
+    </div>
+  </section>
 
+  <section class="section section--heading">
+    <div class="container">
+      <h3>Balance</h3>
+    </div>
+  </section>
+
+  <section class="section section--balance">
+    <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-md-6">
-          <table class="table table--be_info">
+        <div class="col-xs-12 col-sm-6">
+          <table class="issuer">
             <tr>
-              <td><b>Hash:</b></td>
-              <td>
-                <span class="truncate"
-                      title="0000000000000000009fcf515c6d412ecd11f3c82190458b380c8fb2a6150c99"
-                      data-content-start="0000000000000000009fcf515c6d412e"
-                      data-content-end="cd11f3c82190458b380c8fb2a6150c99"
-                ></span>
+              <td class="issuer__img"><img src="img/assets/bitcoin.png" width="48" alt=""></td>
+              <td class="issuer__content">
+                <div class="issuer__name">Bitcoin</div>
+                <div class="text-muted">Unconfirmed balance</div>
+              </td>
+              <td class="issuer__content text-right">
+                <div class="wallet_value">103.84620625 BTC</div>
+                <div class="text-muted">94.84620625 BTC</div>
               </td>
             </tr>
             <tr>
-              <td><b>Date:</b></td>
-              <td>Thursday, November 3, 2016 3:50:24 PM</td>
+              <td class="issuer__img"></td>
+              <td class="issuer__content">
+                <div class="issuer__name">Lykke EUR</div>
+              </td>
+              <td class="issuer__content text-right">
+                <div class="wallet_value">lkeEUR</div>
+              </td>
             </tr>
             <tr>
-              <td><b>Height:</b></td>
-              <td>437213</td>
+              <td class="issuer__img"></td>
+              <td class="issuer__content">
+                <div class="issuer__name">Lykke EUR</div>
+              </td>
+              <td class="issuer__content text-right">
+                <div class="wallet_value">lkeEUR</div>
+              </td>
             </tr>
             <tr>
-              <td><b>Transactions:</b></td>
-              <td>2119</td>
+              <td class="issuer__img"></td>
+              <td class="issuer__content">
+                <div class="issuer__name">Lykke EUR</div>
+              </td>
+              <td class="issuer__content text-right">
+                <div class="wallet_value">lkeEUR</div>
+              </td>
             </tr>
           </table>
         </div>
-        <div class="col-xs-12 col-md-6">
-          <table class="table table--be_info">
+        <div class="col-xs-12 col-sm-6">
+          <table class="issuer">
             <tr>
-              <td><b>Difficulty:</b></td>
-              <td>253,618,246,641.49</td>
-            </tr>
-            <tr>
-              <td><b>Merkle Root:</b></td>
-              <td>
-                  <span class="truncate"
-                        title="625fd972de39aaa0255fefwf3we14e495a54e09fd1807b"
-                        data-content-start="625fd972de39aaa0255fef"
-                        data-content-end="wf3we14e495a54e09fd1807b"
-                  ></span>
+              <td class="issuer__img"><img src="img/assets/bitcoin.png" width="48" alt=""></td>
+              <td class="issuer__content">
+                <div class="issuer__name">Bitcoin</div>
+                <div class="text-muted">Unconfirmed balance</div>
+              </td>
+              <td class="issuer__content text-right">
+                <div class="wallet_value">103.84620625 BTC</div>
+                <div class="text-muted">94.84620625 BTC</div>
               </td>
             </tr>
             <tr>
-              <td><b>Height:</b></td>
-              <td>438368</td>
+              <td class="issuer__img"></td>
+              <td class="issuer__content">
+                <div class="issuer__name">Lykke EUR</div>
+              </td>
+              <td class="issuer__content text-right">
+                <div class="wallet_value">lkeEUR</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="issuer__img"></td>
+              <td class="issuer__content">
+                <div class="issuer__name">Lykke EUR</div>
+              </td>
+              <td class="issuer__content text-right">
+                <div class="wallet_value">lkeEUR</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="issuer__img"></td>
+              <td class="issuer__content">
+                <div class="issuer__name">Lykke EUR</div>
+              </td>
+              <td class="issuer__content text-right">
+                <div class="wallet_value">lkeEUR</div>
+              </td>
             </tr>
           </table>
         </div>
@@ -774,6 +827,7 @@
     </div>
 
   </section>
+
 </article>
 
 <footer class="footer page__footer">
@@ -808,7 +862,6 @@
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/vendor/fastclick.min.js"></script>
 <script src="js/functions.js"></script>
-
 
 </body>
 </html>
