@@ -2,7 +2,7 @@
 
 1. Установить node https://nodejs.org/en/download/
 2. Установить gulp
-`npm install gulp --save-dev`
+`npm install gulp`
 3. Установить все необходимые зависимости
 `npm install` или просто `npm i`
 4. `gulp dev` переносит все необходимые файты, прописанные в gulpfile.js
