@@ -21,6 +21,7 @@ gulp.task('sass', function () {
 gulp.task('copy-js-vendors', function () {
   return gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/clipboard/dist/clipboard.min.js',
     './node_modules/LykkeFramework/assets/js/vendor/fastclick.min.js',
     './node_modules/LykkeFramework/assets/js/vendor/html5shiv.js'
     ])

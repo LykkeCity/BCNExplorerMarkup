@@ -178,11 +178,13 @@ a {
     @include rem(font-size, 18px);
   }
 
-  .issuer {
+  .issuer_list__item:last-child .issuer {
     tr:last-child td {
       border-bottom: 0 !important;
     }
+  }
 
+  .issuer {
     &__img {
       @include rem(padding-top, 10px);
     }
@@ -195,6 +197,14 @@ a {
   }
 }
 
+.issuer_list {
+  overflow: hidden;
+
+  &__item {
+    margin-bottom: -1px;
+  }
+}
+
 .section--tabs {
   .nav-tabs {
     border-top: 1px solid $border-alt;
@@ -204,11 +214,46 @@ a {
 }
 
 .table {
-  tr td {
-    white-space: normal;
+  tr {
+    td {
+      white-space: normal;
+    }
+
+    th {
+      text-transform: none;
+    }
   }
 
-  &--be_info.table {
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__header {
+    &--main {
+      th {
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+
+  &.table--simple {
+    @include rem(margin-bottom, 40px);
+
+    tr {
+      td, th {
+        white-space: nowrap;
+
+        @include rem(font-size, 18px);
+        @include rem(padding, 16px 20px 16px 0)
+      }
+    }
+  }
+
+  &.table--be_info {
     @include rem(font-size, 18px);
 
     tr {
@@ -223,6 +268,12 @@ a {
 
       b {
         color: $text;
+      }
+
+      p {
+        @include rem(font-size, 18px);
+        @include rem(line-height, 30px);
+        @include rem(margin, 4px 0);
       }
 
       td, th {
@@ -249,68 +300,8 @@ a {
     }
   }
 
-  &--text_big.table {
+  &.table--text_big {
     @include rem(font-size, 24px);
-  }
-
-  &--transaction_view.table {
-    @include rem(font-size, 16px);
-
-    tr {
-      th {
-        text-transform: none;
-        color: $secondary;
-        font-weight: normal;
-        letter-spacing: normal;
-
-        @include rem(font-size, 18px);
-        @include rem(padding, 20px 30px 20px 0);
-
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-
-      td, th {
-        cursor: auto;
-        border: 0;
-      }
-
-      td {
-        border: 0;
-        vertical-align: top;
-
-        @include rem(padding, 15px 15px 9px 0);
-
-        &:nth-child(2) {
-          @include rem(width, 555px);
-        }
-      }
-
-      a {
-        color: inherit;
-
-        &:hover {
-          color: $blue;
-        }
-      }
-
-      &:hover {
-        background: transparent;
-
-        td, th {
-          background: transparent;
-        }
-      }
-    }
-
-    .table__header ~ .table__header {
-      .transaction_view__title {
-        border-top: 1px solid #f0f0f0;
-
-        @include rem(padding-top, 20px);
-      }
-    }
   }
 
   &--asstes {
@@ -321,14 +312,6 @@ a {
         &:first-child {
           @include rem(width, 10px !important);
         }
-      }
-    }
-  }
-
-  &__header {
-    &--main {
-      th {
-        padding-bottom: 0 !important;
       }
     }
   }
@@ -825,4 +808,114 @@ a {
   background: $gray-5;
 
   @include rem(padding, 25px);
+}
+
+.current-address-transaction a {
+  font-weight: $fw-semi;
+}
+
+.nav-tabs > li {
+  &:first-child {
+    @include rem(margin-left, -20px)
+  }
+
+  > a:not(.btn) {
+    @include rem(padding, 14px 20px 10px)
+  }
+}
+
+.ownership_value {
+  border-bottom: 3px solid $primary;
+  border-radius: $border-radius;
+}
+
+.table_coinholders {
+  ._address {
+    width: 585px;
+  }
+  ._ownership {
+    @include rem(padding-right, 60px !important);
+  }
+  ._amount {}
+  ._value {
+    width: 280px;
+  }
+
+  @media all and (max-width: $screen-tablet) {
+    .ownership_value,
+    ._value {
+      display: none;
+    }
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    .truncate {
+      display: block;
+
+      @include rem(max-width, 200px)
+    }
+  }
+}
+
+.icon--arrow_left_big:before {
+  content: "\e93a";
+  display: block;
+  @include rotate(180deg);
+}
+
+.block_nav {
+  float: right;
+  white-space: nowrap;
+
+  @include rem(margin, -10px -16px);
+
+  .btn {
+    @include rem(width, 40px);
+    @include rem(margin, 0 5px);
+  }
+
+  &__left,
+  &__field,
+  &__right {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__field {
+    position: relative;
+
+    .control-label {
+      position: absolute;
+      top: 50%;
+      margin-bottom: 0;
+
+      @include rem(left, 20px);
+      @include rem(margin-top, -10px);
+    }
+
+    .form-control {
+      @include rem(width, 150px);
+      @include rem(padding-left, 70px);
+    }
+  }
+
+  @media all and (max-width: 480px) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.copy_code {
+  .icon {
+    margin-right: 5px;
+
+    &--check_thin {
+      position: relative;
+      top: -2px;
+    }
+
+    + span {
+      margin-left: 0;
+    }
+  }
 }

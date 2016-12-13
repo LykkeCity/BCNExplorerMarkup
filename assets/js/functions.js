@@ -57,3 +57,16 @@ $('.open_hidden_content').on('click', function(ev) {
   $this.toggleClass('active');
   $(id).slideToggle('fast');
 });
+
+$(function() {
+  var clipboard = new Clipboard('.copy_code', {
+    text: function(trigger) {
+      return trigger.previousElementSibling.getAttribute('title');
+    }
+  });
+
+  clipboard.on('success', function(e) {
+    e.trigger.innerHTML =  '<i class="icon icon--check_thin"></i> Copied';
+    e.clearSelection();
+  });
+});
