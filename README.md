@@ -1,11 +1,8 @@
 # Lykke Blockchain Explorer Markup
 
 1. Установить node https://nodejs.org/en/download/
-2. Установить gulp
-`npm install gulp`
-3. Установить все необходимые зависимости
-`npm install` или просто `npm i`
-4. `gulp dev` переносит все необходимые файты, прописанные в gulpfile.js
-5. `gulp watch` запускает локальный сервер и ватчер для силей
-6. Чтобы обновить подключаемые пакеты (Периодически обновляется LykkeFramework)
-`npm update`
+2. `npm install gulp` Установить gulp
+3. `npm install` Установить все необходимые зависимости
+4. `npm update` Чтобы обновить подключаемые пакеты (Периодически обновляется LykkeFramework)
+5. `gulp dev` переносит все необходимые файты, прописанные в gulpfile.js
+6. `gulp watch` запускает локальный сервер и ватчер для стилей
