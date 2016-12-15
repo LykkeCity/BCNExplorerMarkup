@@ -61,7 +61,7 @@ $('.open_hidden_content').on('click', function(ev) {
 $(function() {
   var clipboard = new Clipboard('.copy_code', {
     text: function(trigger) {
-      return trigger.previousElementSibling.getAttribute('title');
+      return trigger.previousElementSibling.innerHTML;
     }
   });
 

@@ -41,35 +41,19 @@
 <header class="header">
   <div class="container">
     <div class="row">
-      <div class="col-xs-2 col-sm-4"><a href="/" class="logo header__logo">
+      <div class="col-xs-2 col-md-4"><a href="/" class="logo header__logo">
         <img src="img/logo-lykke.svg" height="38" alt=""/>
-        <span class="header__title"><b>Blockchain</b>Explorer</span>
+        <span class="header__title hidden-xs hidden-sm"><b>Blockchain</b>Explorer</span>
       </a></div>
-      <div class="col-xs-10 col-sm-9 col-md-4 text-center">
-        <button type="button" class="navbar-toggle collapsed btn btn--stroke pull-right" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <div class="input-search">
-            <form>
-              <button type="button" class="btn btn--icon"><i class="icon icon--search"></i></button>
-              <input type="text" class="form-control form-control--search" placeholder="Search block, address, transaction">
-            </form>
-          </div>
-          <ul class="social social--header visible-xs visible-sm">
-            <li><a href="https://www.facebook.com/groups/542506412568917/" target="_blank" class="social__item"><i class="icon icon--fb_simple"></i></a></li>
-            <li><a href="https://twitter.com/LykkeCity" target="_blank" class="social__item"><i class="icon icon--tw"></i></a></li>
-            <li><a href="http://instagram.com/lykkecity" target="_blank" class="social__item"><i class="icon icon--instagram"></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank" class="social__item"><i class="icon icon--youtube"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/lykke-ag" target="_blank" class="social__item"><i class="icon icon--linkedin-icn"></i></a></li>
-            <li><a href="https://www.reddit.com/r/lykke/" target="_blank" class="social__item"><i class="icon icon--reddit"></i></a></li>
-            <li><a href="https://t.co/TmjMYnQD7T" target="_blank" class="social__item"><i class="icon icon--telegram"></i></a></li>
-          </ul>
+      <div class="col-xs-8 col-md-4 text-center">
+        <div class="input-search">
+          <form>
+            <button type="button" class="btn btn--icon"><i class="icon icon--search"></i></button>
+            <input type="text" class="form-control form-control--search" placeholder="Search block, address, transaction">
+          </form>
         </div>
       </div>
-      <div class="col-sm-4 hidden-xs hidden-sm">
+      <div class="col-xs-2 col-md-4">
         <a href="https://wiki.lykkex.com/start?do=login" class="btn btn-link pull-right">Sign In</a>
       </div>
     </div>
@@ -84,25 +68,22 @@
 
       <div class="page__header">
         <div class="row">
-          <div class="col-xs-3 hidden-xs pull-right">
-            <div class="address_qrcode">
-              <img src="img/assets/usd-lykke.png" alt="USD Lykke" width="140">
-            </div>
-          </div>
           <div class="col-sm-9">
             <h2 class="page__title">Lykke USD</h2>
             <div class="address_code address_code--lead">
-              <span class="truncate"
-                    title="AWm6LaxuJgUQqJ372qeiUxXhxRWTXfpzog"
-                    data-content-start="AWm6LaxuJgUQqJ372"
-                    data-content-end="qeiUxXhxRWTXfpzog"
-              ></span>
+              <span>AWm6LaxuJgUQqJ372qeiUxXhxRWTXfpzog</span>
               <button class="btn btn--icon copy_code" type="button" title="Copy code">
                 <i class="icon icon--copy"></i>
                 <span class="visible-xs-inline-block">Copy code</span>
               </button>
             </div>
-
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <div class="address_qrcode">
+              <img src="img/assets/usd-lykke.png" alt="USD Lykke" width="140">
+            </div>
+          </div>
+          <div class="col-xs-12">
             <p class="text-muted"><a href="">Asset definition</a><span class="middot">&middot;</span><a href="">Asset webpage</a><span class="middot">&middot;</span><a href="">Coinprism metadata</a></p>
           </div>
         </div>
@@ -165,7 +146,7 @@
             <div class="col-sm-4">
               <h3>Transactions <span>3 of 32</span></h3>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-8 mobile-scroll">
               <div class="tabs_stack pull-right">
                 <div class="tab_item tab_item--active"><a class="tab_item__link" href="">All &middot; 32</a></div>
                 <div class="tab_item"><a class="tab_item__link" href="">Send &middot; 10</a></div>
@@ -191,14 +172,9 @@
                 </div>
                 <div class="col-sm-8">
                   <div class="address_code">
-                     <a href="#" class="truncate"
-                           title="5814865201976bf7f0658a88a563f7a99fb0774e3631975cc8f89dd32d"
-                           data-content-start="5814865201976bf7f0658a88a563f"
-                           data-content-end="7a99fb0774e3631975cc8f89dd32d"
-                     ></a>
+                    <a href="">5814865201976bf7f0658a88a563f7a99fb0774e3631975cc8f89dd32d</a>
                     <button class="btn btn--icon copy_code" type="button" title="Copy code">
                       <i class="icon icon--copy"></i>
-                      <span class="visible-xs-inline-block">Copy code</span>
                     </button>
                   </div>
                   <span class="action_text">Sunday, September 4, 2016 10:57:34 PM</span>
@@ -346,13 +322,15 @@
                         <div class="transaction_list__item">
                           <div class="row">
                             <div class="col-xs-8">
-                              <a href="">
+                              <div class="links_group">
+                                <a href="">
                                <span class="truncate"
                                      title="15BzAZf9J3dQ5XTdxfAkr7H6QUMJW2GQaL"
                                      data-content-start="15BzAZf9J3dQ5XTdx"
                                      data-content-end="fAkr7H6QUMJW2GQaL"
                                ></span>
-                              </a>
+                                </a>
+                              </div>
                             </div>
                             <div class="col-xs-4">
                               <span>0.1218</span>
@@ -362,13 +340,15 @@
                         <div class="transaction_list__item _bold">
                           <div class="row">
                             <div class="col-xs-8">
-                              <a href="">
+                              <div class="links_group">
+                                <a href="">
                               <span class="truncate"
                                     title="2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw"
                                     data-content-start="2NAmtRw32LvymjsCx1"
                                     data-content-end="Wdo8i42v49U6tHDEw"
                               ></span>
-                              </a>
+                                </a>
+                              </div>
                             </div>
                             <div class="col-xs-4">
                               <span>249.54025145</span>
@@ -428,13 +408,15 @@
                         <div class="transaction_list__item">
                           <div class="row">
                             <div class="col-xs-8">
-                              <a href="">
+                              <div class="links_group">
+                                <a href="">
                                <span class="truncate"
                                      title="15BzAZf9J3dQ5XTdxfAkr7H6QUMJW2GQaL"
                                      data-content-start="15BzAZf9J3dQ5XTdx"
                                      data-content-end="fAkr7H6QUMJW2GQaL"
                                ></span>
-                              </a>
+                                </a>
+                              </div>
                             </div>
                             <div class="col-xs-4">
                               <span>0.1218</span>
@@ -494,13 +476,15 @@
                         <div class="transaction_list__item">
                           <div class="row">
                             <div class="col-xs-8">
-                              <a href="">
+                              <div class="links_group">
+                                <a href="">
                                <span class="truncate"
                                      title="15BzAZf9J3dQ5XTdxfAkr7H6QUMJW2GQaL"
                                      data-content-start="15BzAZf9J3dQ5XTdx"
                                      data-content-end="fAkr7H6QUMJW2GQaL"
                                ></span>
-                              </a>
+                                </a>
+                              </div>
                             </div>
                             <div class="col-xs-4">
                               <span>0.1218</span>
@@ -533,14 +517,9 @@
                 </div>
                 <div class="col-sm-8">
                   <div class="address_code">
-                     <a href="" class="truncate"
-                         title="5814865201976bf7f0658a88a563f7a99fb0774e3631975cc8f89dd32d"
-                         data-content-start="5814865201976bf7f0658a88a563f"
-                         data-content-end="7a99fb0774e3631975cc8f89dd32d"
-                     ></a>
+                    <a href="">5814865201976bf7f0658a88a563f7a99fb0774e3631975cc8f89dd32d</a>
                     <button class="btn btn--icon copy_code" type="button" title="Copy code">
                       <i class="icon icon--copy"></i>
-                      <span class="visible-xs-inline-block">Copy code</span>
                     </button>
                   </div>
                   <span class="action_text">Sunday, September 4, 2016 10:57:34 PM</span>
@@ -620,13 +599,15 @@
                         <div class="transaction_list__item">
                           <div class="row">
                             <div class="col-xs-8">
-                              <a href="">
+                              <div class="links_group">
+                                <a href="">
                                <span class="truncate"
                                      title="15BzAZf9J3dQ5XTdxfAkr7H6QUMJW2GQaL"
                                      data-content-start="15BzAZf9J3dQ5XTdx"
                                      data-content-end="fAkr7H6QUMJW2GQaL"
                                ></span>
-                              </a>
+                                </a>
+                              </div>
                             </div>
                             <div class="col-xs-4">
                               <span>0.1218</span>
@@ -636,13 +617,15 @@
                         <div class="transaction_list__item">
                           <div class="row">
                             <div class="col-xs-8">
-                              <a href="">
-                              <span class="truncate"
-                                    title="2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw"
-                                    data-content-start="2NAmtRw32LvymjsCx1"
-                                    data-content-end="Wdo8i42v49U6tHDEw"
-                              ></span>
-                              </a>
+                              <div class="links_group">
+                                <a href="">
+                               <span class="truncate"
+                                     title="15BzAZf9J3dQ5XTdxfAkr7H6QUMJW2GQaL"
+                                     data-content-start="15BzAZf9J3dQ5XTdx"
+                                     data-content-end="fAkr7H6QUMJW2GQaL"
+                               ></span>
+                                </a>
+                              </div>
                             </div>
                             <div class="col-xs-4">
                               <span>249.54025145</span>
@@ -675,14 +658,9 @@
                 </div>
                 <div class="col-sm-8">
                   <div class="address_code">
-                     <a href="" class="truncate"
-                           title="5814865201976bf7f0658a88a563f7a99fb0774e3631975cc8f89dd32d"
-                           data-content-start="5814865201976bf7f0658a88a563f"
-                           data-content-end="7a99fb0774e3631975cc8f89dd32d"
-                     ></a>
+                    <a href="">5814865201976bf7f0658a88a563f7a99fb0774e3631975cc8f89dd32d</a>
                     <button class="btn btn--icon copy_code" type="button" title="Copy code">
                       <i class="icon icon--copy"></i>
-                      <span class="visible-xs-inline-block">Copy code</span>
                     </button>
                   </div>
                   <span class="action_text">Sunday, September 4, 2016 10:57:34 PM</span>
@@ -744,13 +722,15 @@
                         <div class="transaction_list__item">
                           <div class="row">
                             <div class="col-xs-8">
-                              <a href="">
+                              <div class="links_group">
+                                <a href="">
                                <span class="truncate"
                                      title="15BzAZf9J3dQ5XTdxfAkr7H6QUMJW2GQaL"
                                      data-content-start="15BzAZf9J3dQ5XTdx"
                                      data-content-end="fAkr7H6QUMJW2GQaL"
                                ></span>
-                              </a>
+                                </a>
+                              </div>
                             </div>
                             <div class="col-xs-4">
                               <span>0.1218</span>

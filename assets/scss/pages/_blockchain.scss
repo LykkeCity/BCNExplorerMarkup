@@ -2,6 +2,51 @@ a {
   color: inherit;
 }
 
+.header {
+  @media (max-width: $screen-landscape) {
+    .btn-link {
+      margin-top: 0;
+    }
+
+    .header__logo {
+      line-height: 40px;
+    }
+  }
+
+  @media (max-width: $screen-mobile-old) {
+    .btn-link {
+      margin-top: 11px;
+      padding: 0;
+    }
+
+    &__logo {
+      top: 5px !important;
+    }
+
+    &.fixed {
+      .btn-link {
+        margin-top: 1px;
+      }
+    }
+  }
+
+  @media (max-width: $screen-mobile) {
+    &__logo {
+      top: 2px !important;
+    }
+
+    .input-search .form-control {
+      padding-left: 35px;
+    }
+
+    &.fixed {
+      .header__logo {
+        top: -2px !important;
+      }
+    }
+  }
+}
+
 .page {
   .page__header {
     border-bottom: 1px solid $border-alt;
@@ -38,6 +83,18 @@ a {
   @media all and (min-width: $screen-landscape + 1) {
     .page__subtitle {
       @include rem(font-size, 22px);
+    }
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    .section--padding {
+      padding: 40px 0;
+    }
+  }
+
+  @media all and (max-width: $screen-mobile) {
+    .section--padding {
+      padding: 28px 0;
     }
   }
 }
@@ -84,13 +141,11 @@ a {
     }
   }
 
-  @media all and (min-width: $screen-tablet + 1) {
-    .fixed & {
-      .form-control {
-        border-color: #fff;
+  .fixed & {
+    .form-control {
+      border-color: #fff;
 
-        @include rem(height, 35px);
-      }
+      @include rem(height, 35px);
     }
   }
 }
@@ -166,6 +221,29 @@ a {
   + .section--transactions {
     .panel:first-child {
       border-top: 0;
+    }
+  }
+  
+  @media all and (max-width: $screen-landscape) {
+    .tabs_stack {
+      float: none !important;
+      white-space: nowrap;
+
+      @include rem(margin-top, 10px)
+    }
+
+    .mobile-scroll {
+      padding: 0;
+      overflow: hidden;
+
+      @include rem(height, 45px);
+
+
+      .tabs_stack {
+        overflow: hidden;
+        overflow-x: auto;
+        padding: 0 15px 20px;
+      }
     }
   }
 }
@@ -312,6 +390,22 @@ a {
         &:first-child {
           @include rem(width, 10px !important);
         }
+      }
+    }
+  }
+
+  @media all and (max-width: $screen-mobile) {
+    &.table--be_info {
+      display: block;
+
+      tr, td, th, thead, tbody {
+        display: block;
+        width: 100% !important;
+        padding: 0 !important;
+      }
+
+      tr {
+        padding-bottom: 15px !important;
       }
     }
   }
@@ -505,13 +599,14 @@ a {
 
 .address_code {
   position: relative;
+  word-break: break-all;
 
   .btn {
     position: relative;
     padding: 0;
+    top: -1px;
 
     @include rem(margin-left, 4px);
-    @include rem(top, -1px);
 
     .icon {
       @include rem(font-size, 19px);
@@ -526,6 +621,15 @@ a {
     @include rem(font-size, 28px);
     @include rem(line-height, 35px);
     @include rem(margin-bottom, 15px);
+  }
+
+  @media all and (max-width: $screen-mobile) {
+    padding-right: 30px;
+
+    &--lead {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -603,6 +707,7 @@ a {
   @media all and (max-width: $screen-landscape) {
     .confirmation_label {
       margin-top: 0;
+      text-align: left;
 
       @include rem(margin-bottom, 10px)
     }
@@ -610,7 +715,12 @@ a {
     .address_code {
       @include rem(margin-bottom, 15px);
     }
+
+    &__header {
+      padding: 16px 0;
+    }
   }
+
 }
 
 .transaction_panel {
@@ -619,23 +729,23 @@ a {
   &__header {
     display: table;
     width: 100%;
-
-    .wallet_value {
-      font-weight: $fw-semi;
-      color: $text;
-      letter-spacing: 0.2px;
-      text-align: right;
-
-      @include rem(padding-top, 10px);
-      @include rem(font-size, 18px);
-      @include rem(line-height, 20px);
-    }
   }
 }
 
 .transaction_details {
   + .transaction_details {
     @include rem(margin-top, 20px)
+  }
+
+  .wallet_value {
+    font-weight: $fw-semi;
+    color: $text;
+    letter-spacing: 0.2px;
+    text-align: right;
+
+    @include rem(padding-top, 10px);
+    @include rem(font-size, 18px);
+    @include rem(line-height, 20px);
   }
 }
 
@@ -648,6 +758,10 @@ a {
   }
 
   @media all and (max-width: $screen-landscape) {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+
     .transaction_arrow {
       @include rotate(90deg);
       @include rem(padding, 13px 5px 12px 10px);
@@ -757,12 +871,18 @@ a {
 .address_qrcode {
   float: right;
   max-width: 100%;
+  width: 140px;
 
-  @include rem(width, 140px);
   @include rem(margin-top, -15px);
 
   img {
     max-width: 100%;
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    text-align: center;
+    float: none;
+    margin: 0 auto 20px;
   }
 }
 
