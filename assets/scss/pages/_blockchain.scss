@@ -3,6 +3,14 @@ a {
 }
 
 .header {
+  .btn-link {
+    margin-top: 2px;
+  }
+
+  .header__logo {
+    line-height: 45px;
+  }
+
   @media (max-width: $screen-landscape) {
     .btn-link {
       margin-top: 0;
@@ -152,19 +160,18 @@ a {
 
 .section--search {
   text-align: center;
-  background: #F7F8F9;
 
   h2 {
-    text-transform: uppercase;
-    letter-spacing: .07em;
     color: $secondary;
 
-    @include rem(font-size, 34px);
+    @include rem(margin-bottom, 30px);
   }
 
-  @media all and (max-width: 767px) {
-    h2 {
-      margin-bottom: 30px;
+  a {
+    color: $blue;
+
+    &:hover {
+      color: $secondary;
     }
   }
 }
@@ -197,8 +204,15 @@ a {
   }
 }
 
+.section--transactions {
+  position: relative;
+}
+
 .section--heading {
   background: $gray-5;
+  z-index:1;
+  position: relative;
+  min-height: 80px;
 
   @include rem(padding, 25px 0 23px);
 
@@ -219,9 +233,28 @@ a {
   }
 
   + .section--transactions {
-    .panel:first-child {
+    .panel:first-child, .panel:first-of-type {
       border-top: 0;
     }
+  }
+
+  .section--transactions & {
+    background: transparent;
+    z-index:2;
+    position: absolute;
+    pointer-events: none;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+
+
+    h3 {
+      pointer-events: all;
+    }
+  }
+
+  + .panel {
+    border-top: 0;
   }
   
   @media all and (max-width: $screen-landscape) {
@@ -230,6 +263,14 @@ a {
       white-space: nowrap;
 
       @include rem(margin-top, 10px)
+    }
+
+    &_with_tabs {
+      @include rem(padding-top, 70px);
+
+      + .section--transactions .section--heading {
+        @include rem(margin-bottom, 45px);
+      }
     }
 
     .mobile-scroll {
@@ -243,6 +284,14 @@ a {
         overflow: hidden;
         overflow-x: auto;
         padding: 0 15px 20px;
+      }
+    }
+  }
+
+  @media all and (max-width: $screen-mobile) {
+    &_with_tabs {
+      + .section--transactions .section--heading {
+        @include rem(margin-bottom, 30px);
       }
     }
   }
@@ -1038,4 +1087,17 @@ a {
       margin-left: 0;
     }
   }
+}
+
+._word_break {
+  word-break: break-all;
+  white-space: normal;
+  line-height: normal;
+  display: inline-block;
+}
+
+._no_break {
+  word-break: normal;
+  word-wrap: normal;
+  white-space: nowrap;
 }
