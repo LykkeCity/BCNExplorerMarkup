@@ -1002,12 +1002,19 @@ a {
   ._address {
     width: 585px;
   }
-  ._ownership {
+
+  ._amount {
     @include rem(padding-right, 60px !important);
   }
-  ._amount {}
+
   ._value {
     width: 280px;
+  }
+
+  ._change {
+    display: block;
+
+    @include rem(font-size, 16px);
   }
 
   @media all and (max-width: $screen-tablet) {
