@@ -61,53 +61,156 @@
 </header>
 
 <article class="content page">
+  <div class="page_border"></div>
 
-  <section class="section section--be section--padding">
+  <div class="scroll-progress"></div>
+
+  <section class="section section--padding">
     <div class="container container--extend">
-
-      <div class="page__header">
-        <h2 class="page__title">Assets directory</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="table-responsive">
-            <table class="table table--asstes table--be_info">
-              <tr>
-                <th colspan="2">Asset</th>
-                <th>Issuer</th>
-                <th>Ticker</th>
-                <th>Color address</th>
-              </tr>
-              <tr>
-                <td><a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a></td>
-                <td><a href="">Mathematics for Engineers II: Calculus and Linear Algebra</a></td>
-                <td>Nigeria Uni Library</td>
-                <td>NLIB</td>
-                <td>AHLpv5eDas7nYmScdxdHzfbVUGRPs5N3tq</td>
-              </tr>
-              <tr>
-                <td><a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a></td>
-                <td><a href="">Mathematics for Engineers II: Calculus and Linear Algebra</a></td>
-                <td>Nigeria Uni Library</td>
-                <td>NLIB</td>
-                <td>AHLpv5eDas7nYmScdxdHzfbVUGRPs5N3tq</td>
-              </tr>
-              <tr>
-                <td><a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a></td>
-                <td><a href="">Mathematics for Engineers II: Calculus and Linear Algebra</a></td>
-                <td>Nigeria Uni Library</td>
-                <td>NLIB</td>
-                <td>AHLpv5eDas7nYmScdxdHzfbVUGRPs5N3tq</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-
-      </div>
-
+      <h2>Assets directory</h2>
     </div>
   </section>
+
+  <section class="section section--index">
+    <div class="index_bar_container">
+      <div class="container">
+        <div class="index_bar">
+          <div class="index_bar__inner">
+            <div class="index_bar__button">
+              <button type="button" class="btn btn--icon _show_search_block"><i class="icon icon--search"></i></button>
+            </div>
+            <ul class="index_bar__list list">
+              <li class="list__item active"><a href="#demical">0–9</a></li>
+              <li class="list__item active"><a href="#A">A</a></li>
+              <li class="list__item"><a href="#B">B</a></li>
+              <li class="list__item"><a href="#C">C</a></li>
+              <li class="list__item"><a href="#D">D</a></li>
+              <li class="list__item"><a href="#E">E</a></li>
+              <li class="list__item"><a href="#F">F</a></li>
+              <li class="list__item"><a href="#G">G</a></li>
+              <li class="list__item"><a href="#H">H</a></li>
+              <li class="list__item"><a href="#I">I</a></li>
+              <li class="list__item"><a href="#J">J</a></li>
+              <li class="list__item"><a href="#K">K</a></li>
+              <li class="list__item"><a href="#L">L</a></li>
+              <li class="list__item"><a href="#M">M</a></li>
+              <li class="list__item"><a href="#N">N</a></li>
+              <li class="list__item"><a href="#O">O</a></li>
+              <li class="list__item"><a href="#P">P</a></li>
+              <li class="list__item"><a href="#Q">Q</a></li>
+              <li class="list__item"><a href="#R">R</a></li>
+              <li class="list__item"><a href="#S">S</a></li>
+              <li class="list__item"><a href="#T">T</a></li>
+              <li class="list__item"><a href="#U">U</a></li>
+              <li class="list__item"><a href="#V">V</a></li>
+              <li class="list__item"><a href="#W">W</a></li>
+              <li class="list__item"><a href="#X">X</a></li>
+              <li class="list__item"><a href="#Y">Y</a></li>
+              <li class="list__item"><a href="#Z">Z</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section">
+    <div class="container">
+      <div class="search_block">
+        <form>
+          <div class="row">
+            <div class="col-xs-10 col-sm-11">
+              <div class="input-search input-search--index">
+                <button class="btn btn--icon"><i class="icon icon--search"></i></button>
+                <input type="text" class="form-control form-control--search" placeholder="Asset or address...">
+              </div>
+            </div>
+            <div class="col-xs-2 col-sm-1">
+              <button type="button" class="btn btn--link _hide_search_block">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table--simple table_asstes">
+          <tr>
+            <th colspan="2">Asset and address</th>
+            <th>Issuer</th>
+            <th>Ticker</th>
+            <th  class="text-right">Coinholders</th>
+            <th>Coins issued</th>
+          </tr>
+          <tr>
+            <td class="issuer__img"><a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a></td>
+            <td class="issuer__content">
+              <div class="issuer__name"><a href="">Bitcoin</a></div>
+              <div class="text-muted"><a href="">AXbjK28WDbvLJA8waLdYXfkGWWU2qesDY5</a></div>
+            </td>
+            <td><span class="check check--green"></span> <span class="ticker_name">Nigeria Uni Library</span></td>
+            <td>NLIB</td>
+            <td class="text-right">18</td>
+            <td>4.00 Vote2015</td>
+          </tr>
+          <tr>
+            <td class="issuer__img"><a href=""><img src="img/be/asset_default.jpg" width="48" alt=""></a></td>
+            <td class="issuer__content">
+              <div class="issuer__name"><a href="">Bitcoin</a></div>
+              <div class="text-muted"><a href="">AXbjK28WDbvLJA8waLdYXfkGWWU2qesDY5</a></div>
+            </td>
+            <td><span class="check check--green"></span> <span class="ticker_name">iTunes</span></td>
+            <td>NLIB</td>
+            <td class="text-right">12</td>
+            <td>10.00 Timeless</td>
+          </tr>
+          <tr>
+            <td class="issuer__img"><a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a></td>
+            <td class="issuer__content">
+              <div class="issuer__name"><a href="">Bitcoin</a></div>
+              <div class="text-muted"><a href="">AXbjK28WDbvLJA8waLdYXfkGWWU2qesDY5</a></div>
+            </td>
+            <td><span class="check check--green"></span> <span class="ticker_name">PaperSafe</span></td>
+            <td>NLIB</td>
+            <td class="text-right">42</td>
+            <td>980.00 PaperSAFE</td>
+          </tr>
+          <tr>
+            <td class="issuer__img"><a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a></td>
+            <td class="issuer__content">
+              <div class="issuer__name"><a href="">Bitcoin</a></div>
+              <div class="text-muted"><a href="">AXbjK28WDbvLJA8waLdYXfkGWWU2qesDY5</a></div>
+            </td>
+            <td><span class="check check--green"></span> <span class="ticker_name">Nigeria Uni Library</span></td>
+            <td>NLIB</td>
+            <td class="text-right">18</td>
+            <td>4.00 Vote2015</td>
+          </tr>
+          <tr>
+            <td class="issuer__img"><a href=""><img src="img/be/asset_default.jpg" width="48" alt=""></a></td>
+            <td class="issuer__content">
+              <div class="issuer__name"><a href="">Bitcoin</a></div>
+              <div class="text-muted"><a href="">AXbjK28WDbvLJA8waLdYXfkGWWU2qesDY5</a></div>
+            </td>
+            <td><span class="check check--green"></span> <span class="ticker_name">iTunes</span></td>
+            <td>NLIB</td>
+            <td class="text-right">12</td>
+            <td>10.00 Timeless</td>
+          </tr>
+          <tr>
+            <td class="issuer__img"><a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a></td>
+            <td class="issuer__content">
+              <div class="issuer__name"><a href="">Bitcoin</a></div>
+              <div class="text-muted"><a href="">AXbjK28WDbvLJA8waLdYXfkGWWU2qesDY5</a></div>
+            </td>
+            <td><span class="check check--green"></span> <span class="ticker_name">PaperSafe</span></td>
+            <td>NLIB</td>
+            <td class="text-right">42</td>
+            <td>980.00 PaperSAFE</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </article>
 
 <footer class="footer">
@@ -143,8 +246,29 @@
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/vendor/fastclick.min.js"></script>
 <script src="js/vendor/clipboard.min.js"></script>
+<script src="js/vendor/in-view.min.js"></script>
 <script src="js/functions.js"></script>
 
+<script>
+  var searchBlock = $('.search_block'),
+      indexBar = $('.index_bar'),
+      barDisabledClass = 'index_bar--disabled',
+      searchActiveClass = 'search_block--show';
+
+  function showSearch() {
+    searchBlock.toggleClass(searchActiveClass);
+    indexBar.toggleClass(barDisabledClass)
+  }
+
+  function hideSearch() {
+    searchBlock.removeClass(searchActiveClass);
+    indexBar.removeClass(barDisabledClass)
+  }
+
+  $('._show_search_block').on('click', showSearch);
+  $('._hide_search_block').on('click', hideSearch);
+
+</script>
 
 </body>
 </html>

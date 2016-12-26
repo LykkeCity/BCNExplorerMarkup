@@ -1,0 +1,150 @@
+.index_bar_container {
+  border-bottom: 1px solid $border-alt;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #fff;
+
+  @include rem(padding-top, 16px);
+  @include rem(height, 57px);
+
+  .container {
+    overflow: auto;
+  }
+}
+
+.section--index {
+  @include rem(margin-top, -40px);
+  @include rem(margin-bottom, 30px);
+  @include rem(height, 57px);
+}
+
+.index_bar {
+  &__inner {
+    font-size: 0;
+  }
+
+  &__list {
+    display: inline-block;
+    vertical-align: top;
+    cursor: default;
+    position: relative;
+
+    .list__item {
+      font-weight: $fw-semi;
+      color: $text;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      overflow: hidden;
+
+      @include rem(padding-left, 10px);
+      @include rem(padding-bottom, 18px);
+      @include rem(font-size, 18px);
+      @include rem(line-height, 22px);
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: $primary;
+        width: 100px;
+        
+        @include transition(width, $transition-default);
+      }
+
+      &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      a {
+        cursor: pointer;
+        color: inherit;
+        position: relative;
+
+        @include rem(padding, 5px);
+
+        &:hover {
+          color: $text;
+        }
+      }
+
+      &.active {
+        font-weight: $fw-semi !important;
+        color: $text !important;
+        border-bottom-color: $primary !important;
+        
+        &:after {
+          width: 100px !important;
+        }
+
+        a {
+          top: 0 !important;
+        }
+
+        ~ .list__item {
+          font-weight: normal;
+          letter-spacing: 0;
+          color: rgba($secondary, .6);
+
+          &:after {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    vertical-align: top;
+
+    @include rem(margin-right, 7px);
+
+    .btn--icon {
+      position: relative;
+      top: -1px;
+
+      .icon {
+        @include rem(font-size, 17px);
+      }
+    }
+  }
+
+  &--disabled {
+    .index_bar__list {
+      pointer-events: none;
+
+      .list__item {
+        color: rgba($secondary, .6) !important;
+        font-weight: normal !important;
+        top: 0 !important;
+
+        &:after {
+         display: none;
+        }
+
+        a {
+          top: -1px !important;
+          color: rgba($secondary, .6) !important;
+        }
+      }
+    }
+
+    .index_bar__button .btn {
+      color: $secondary;
+
+      .icon {
+        color: $secondary;
+      }
+    }
+  }
+
+  @media all and (min-width: $screen-mobile-old) {
+    &__list .list__item.active ~ .list__item a {
+      @include rem(top, -1px);
+    }
+  }
+}

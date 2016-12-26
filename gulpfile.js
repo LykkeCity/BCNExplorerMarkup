@@ -23,7 +23,8 @@ gulp.task('copy-js-vendors', function () {
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/clipboard/dist/clipboard.min.js',
     './node_modules/LykkeFramework/assets/js/vendor/fastclick.min.js',
-    './node_modules/LykkeFramework/assets/js/vendor/html5shiv.js'
+    './node_modules/LykkeFramework/assets/js/vendor/html5shiv.js',
+    './node_modules/in-view/dist/in-view.min.js'
     ])
     .pipe(gulp.dest('./public/js/vendor'));
 });

@@ -1,4 +1,7 @@
 @import "../../node_modules/LykkeFramework/assets/scss/style.scss";
 
 // optional
+@import 'partials/index';
+@import 'partials/search';
+@import 'partials/sections';
 @import 'pages/blockchain';
