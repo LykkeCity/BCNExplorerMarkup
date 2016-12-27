@@ -918,6 +918,9 @@ a {
 
   .issuer__name {
     font-weight: normal;
+    white-space: normal;
+    word-break: break-all;
+    word-break: break-word;
 
     @include rem(line-height, 24px);
     @include rem(margin-bottom, 4px);
@@ -946,6 +949,10 @@ a {
     .issuer__img {
       width: 0 !important;
       padding: 0 !important;
+
+      img, a {
+        display: none;
+      }
     }
   }
 }
