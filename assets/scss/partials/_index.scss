@@ -123,7 +123,7 @@
   }
 
   @media all and (min-width: $screen-mobile-old) {
-    &__list .list__item.active ~ .list__item a {
+    &__list .list__item a {
       @include rem(top, -1px);
     }
   }
