@@ -30,29 +30,23 @@
     position: relative;
 
     .list__item {
-      font-weight: $fw-semi;
-      color: $text;
       display: inline-block;
       vertical-align: middle;
       position: relative;
       overflow: hidden;
-
-      @include rem(padding-left, 10px);
-      @include rem(padding-bottom, 18px);
-      @include rem(font-size, 18px);
-      @include rem(line-height, 22px);
+      border-bottom: 2px solid transparent;
+      font-weight: normal;
+      letter-spacing: 0;
+      color: rgba($secondary, .6);
 
       &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 2px;
-        background: $primary;
-        width: 100px;
-        
-        @include transition(width, $transition-default);
+        width: 0;
       }
+
+      @include rem(margin-left, 10px);
+      @include rem(padding-bottom, 16px);
+      @include rem(font-size, 18px);
+      @include rem(line-height, 22px);
 
       &:first-child {
         margin-left: 0;
@@ -75,23 +69,9 @@
         font-weight: $fw-semi !important;
         color: $text !important;
         border-bottom-color: $primary !important;
-        
-        &:after {
-          width: 100px !important;
-        }
 
         a {
           top: 0 !important;
-        }
-
-        ~ .list__item {
-          font-weight: normal;
-          letter-spacing: 0;
-          color: rgba($secondary, .6);
-
-          &:after {
-            width: 0;
-          }
         }
       }
     }
