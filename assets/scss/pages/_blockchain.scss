@@ -949,3 +949,12 @@ a {
     }
   }
 }
+
+.check--yellow {
+  &:before {
+    content: '?';
+    font-weight: $fw-semi;
+    font-family: $ff !important;
+    font-size: 18px;
+  }
+}
