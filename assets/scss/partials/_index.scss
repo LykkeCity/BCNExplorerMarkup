@@ -8,7 +8,8 @@
   @include rem(height, 57px);
 
   .container {
-    overflow: auto;
+    overflow: hidden;
+    overflow-x: auto;
   }
 }
 
