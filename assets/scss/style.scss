@@ -1,4 +1,22 @@
-@import "../../node_modules/LykkeFramework/assets/scss/style.scss";
+@import "../../node_modules/LykkeFramework/assets/scss/style-minimal.scss";
+
+// elements
+@import '../../node_modules/LykkeFramework/assets/scss/partials/elements';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/tooltip';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/sections';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/table';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/list';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/links';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/labels';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/tags';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/user';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/tabs';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/modificators';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/spinner';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/check';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/modal';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/status_icon';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/alert';
 
 // optional
 @import 'partials/index';

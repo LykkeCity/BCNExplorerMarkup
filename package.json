@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "clipboard": "^1.5.15",
-    "in-view": "^0.6.1",
     "jquery": "1.12.4"
   }
 }
