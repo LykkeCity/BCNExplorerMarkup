@@ -526,6 +526,11 @@ a {
 
   .confirmation_label {
     margin-top: 2px;
+    font-size: 0;
+
+    .label {
+      margin-bottom: 5px;
+    }
   }
 
   @media all and (max-width: $screen-landscape) {
@@ -533,7 +538,7 @@ a {
       margin-top: 0;
       text-align: left;
 
-      @include rem(margin-bottom, 10px)
+      @include rem(margin-bottom, 5px)
     }
 
     .address_code {
@@ -661,6 +666,14 @@ a {
 
     &._bold {
       font-weight: $fw-semi;
+    }
+  }
+
+  @media (max-width: $screen-desktop) {
+    &__item {
+      .col-xs-4 {
+        white-space: normal;
+      }
     }
   }
 }
@@ -794,6 +807,15 @@ a {
     @include rem(font-size, 16px);
   }
 
+  &.table.table--simple {
+    tr {
+      td, th {
+        @include rem(padding, 6px 20px 6px 0);
+        @include rem(height, 60px);
+      }
+    }
+  }
+
   @media all and (max-width: $screen-tablet) {
     .ownership_value,
     ._value {
@@ -855,6 +877,12 @@ a {
   @media all and (max-width: 480px) {
     margin-top: 0;
     margin-bottom: 0;
+  }
+}
+
+._total {
+  th {
+    vertical-align: middle !important;
   }
 }
 
@@ -965,5 +993,16 @@ a {
     font-weight: $fw-semi;
     font-family: $ff !important;
     font-size: 18px;
+  }
+}
+
+.btn_asset_download {
+  @include rem(margin, 0 2px);
+
+  .icon {
+    position: relative;
+
+    @include rem(font-size, 13px);
+    @include rem(top, -2px);
   }
 }
