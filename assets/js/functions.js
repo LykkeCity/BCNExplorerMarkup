@@ -70,19 +70,3 @@ $(function() {
     e.clearSelection();
   });
 });
-
-
-(function ($) {
-  var $inputCont = $('.input-number'),
-      $addBtn = $('.btn[data-op="add"]'),
-      $subsBtn = $('.btn[data-op="subs"]');
-
-  $addBtn.on('click', function() {
-    var val = $(this).closest($inputCont).find('.form-control--number').val();
-    $(this).closest($inputCont).find('.form-control--number').val( parseInt(val, 10) + 1);
-  });
-  $subsBtn.on('click', function() {
-    var val = $(this).closest($inputCont).find('.form-control--number').val();
-    $(this).closest($inputCont).find('.form-control--number').val( parseInt(val, 10) - 1);
-  });
-})(jQuery);
