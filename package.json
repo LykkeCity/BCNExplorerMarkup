@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "clipboard": "^1.5.15",
-    "jquery": "1.12.4"
+    "jquery": "1.12.4",
+    "eonasdan-bootstrap-datetimepicker": "git+https://github.com/Eonasdan/bootstrap-datetimepicker.git",
+    "moment": "^2.17.1"
   }
 }

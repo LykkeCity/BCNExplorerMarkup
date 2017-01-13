@@ -842,41 +842,100 @@ a {
   float: right;
   white-space: nowrap;
 
-  @include rem(margin, -10px -16px);
-
-  .btn {
-    @include rem(width, 40px);
-    @include rem(margin, 0 5px);
-  }
+  @include rem(margin, -10px 0);
 
   &__left,
-  &__field,
   &__right {
-    display: inline-block;
-    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+
+    @include rem(margin-top, -13px)
+  }
+
+  &__left {
+    @include rem(left, 0px)
+  }
+
+  &__right {
+    @include rem(right, 0px)
   }
 
   &__field {
     position: relative;
+    display: inline-block;
+    vertical-align: middle;
 
-    .control-label {
+    @include rem(margin-right, 16px);
+
+    &:last-child {
+      margin-left: 0;
+    }
+    
+    .control-label--inner {
       position: absolute;
       top: 50%;
       margin-bottom: 0;
 
-      @include rem(left, 20px);
+      @include rem(left, 50px);
       @include rem(margin-top, -10px);
     }
 
+    &.change_block {
+      .btn {
+        @include rem(width, 40px);
+        @include rem(margin, 0 5px);
+      }
+
+      .form-control {
+        @include rem(width, 240px);
+        @include rem(padding-left, 100px);
+        @include rem(padding-right, 40px);
+      }
+    }
+
     .form-control {
-      @include rem(width, 150px);
-      @include rem(padding-left, 70px);
+      &.datetimepicker {
+        @include rem(width, 145px);
+      }
+
+      &.timepicker {
+        @include rem(width, 120px);
+      }
+    }
+
+    .time {
+      display: inline-block;
+      vertical-align: middle;
+
+      + span {
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
   }
 
-  @media all and (max-width: 480px) {
-    margin-top: 0;
+  @media all and (max-width: $screen-landscape) {
     margin-bottom: 0;
+    margin-top: 0;
+    float: none;
+    white-space: normal;
+
+    &__field {
+      margin-top: 10px;
+    }
+  }
+
+  @media all and (max-width: $screen-mobile) {
+    .block_nav__field {
+      &.change_block {
+        width: 100%;
+        margin-right: 0;
+
+        .form-control {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -1004,5 +1063,36 @@ a {
 
     @include rem(font-size, 13px);
     @include rem(top, -2px);
+  }
+}
+
+.input-number {
+  position: relative;
+
+  .input-group-btn-vertical {
+
+  }
+}
+
+.icon--next_transaction {
+  @include rotate(180deg);
+
+  &:before {
+    content: "\e90a";
+  }
+}
+
+.timepicker {
+  .bootstrap-datetimepicker-widget.dropdown-menu {
+    width: 250px;
+
+    table td {
+      border: 0;
+
+      span {
+        height: 40px;
+        line-height: 40px;
+      }
+    }
   }
 }
