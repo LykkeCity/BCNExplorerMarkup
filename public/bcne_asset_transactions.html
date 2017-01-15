@@ -780,19 +780,19 @@
 
                   <div class="block_nav__field">
                     <div class="input-group date datetimepicker">
-                      <input type="text" class="form-control datetimepicker" value="10.11.2016"/>
-                      <span class="input-group-addon">
+                      <input type="text" class="form-control" id="datetimepicker" value="10.11.2016"/>
+                      <label class="input-group-addon open-datetimepicker" for="datetimepicker">
                           <span class="icon icon--cal"></span>
-                      </span>
+                      </label>
                     </div>
                   </div>
 
                   <div class="block_nav__field">
                     <div class="input-group timepicker">
-                      <input type="text" class="form-control timepicker" value="14:40"/>
-                      <span class="input-group-addon">
+                      <input type="text" class="form-control" id="timepicker" value="14:40"/>
+                      <label class="input-group-addon open-datetimepicker" for="timepicker">
                           <span class="icon icon--clock"></span>
-                      </span>
+                      </label>
                     </div>
                   </div>
                 </form>
@@ -947,7 +947,7 @@
 <script src="js/functions.js"></script>
 
 <script>
-  $('.datetimepicker').datetimepicker({
+  $('#datetimepicker').datetimepicker({
 //    debug: true,
     format: 'DD.MM.YYYY',
     icons: {
@@ -959,8 +959,8 @@
       next: "icon--chevron-thin-right"
     }
   });
-  $('.timepicker').datetimepicker({
-        debug: true,
+  $('#timepicker').datetimepicker({
+//        debug: true,
     format: 'h:mm',
     icons: {
       time: "icon--clock",
