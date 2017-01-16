@@ -88,7 +88,45 @@
 
   <section class="section section--heading">
     <div class="container">
-      <h3>Balance</h3>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <h3>Balance</h3>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="block_nav">
+            <form action="">
+              <div class="block_nav__field change_block">
+                <div class="block_nav__left">
+                  <button type="button" class="btn btn--icon"><i class="icon icon--prev_transaction"></i></button>
+                </div>
+                <label class="control-label control-label--inner" for="f3">Block:</label>
+                <input type="text" class="form-control" id="f3" value="439916">
+                <div class="block_nav__right">
+                  <button type="button" class="btn btn--icon"><i class="icon icon--next_transaction"></i></button>
+                </div>
+              </div>
+
+              <div class="block_nav__field">
+                <div class="input-group date datetimepicker">
+                  <input type="text" class="form-control" id="datetimepicker" value="10.11.2016"/>
+                  <label class="input-group-addon open-datetimepicker" for="datetimepicker">
+                    <span class="icon icon--cal"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="block_nav__field">
+                <div class="input-group timepicker">
+                  <input type="text" class="form-control" id="timepicker" value="14:40"/>
+                  <label class="input-group-addon open-datetimepicker" for="timepicker">
+                    <span class="icon icon--clock"></span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -845,7 +883,35 @@
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/vendor/fastclick.min.js"></script>
 <script src="js/vendor/clipboard.min.js"></script>
+<script src="js/vendor/bootstrap-datetimepicker.min.js"></script>
 <script src="js/functions.js"></script>
+
+<script>
+  $('#datetimepicker').datetimepicker({
+//    debug: true,
+    format: 'DD.MM.YYYY',
+    icons: {
+      time: "icon--clock",
+      date: "icon--cal",
+      up: "icon--chevron-thin-up",
+      down: "icon--chevron-thin-down",
+      previous: "icon--chevron-thin-left",
+      next: "icon--chevron-thin-right"
+    }
+  });
+  $('#timepicker').datetimepicker({
+//        debug: true,
+    format: 'h:mm',
+    icons: {
+      time: "icon--clock",
+      date: "icon--cal",
+      up: "icon--chevron-thin-up",
+      down: "icon--chevron-thin-down",
+      previous: "icon--chevron-thin-left",
+      next: "icon--chevron-thin-right"
+    }
+  });
+</script>
 
 </body>
 </html>
