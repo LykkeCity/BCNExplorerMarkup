@@ -1090,6 +1090,16 @@ a {
   }
 }
 
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  white-space: normal;
+
+  td span {
+    @include rem(width, 64px);
+    @include rem(height, 64px);
+    @include rem(line-height, 64px);
+  }
+}
+
 .timepicker {
   .bootstrap-datetimepicker-widget.dropdown-menu {
     width: 250px;
@@ -1103,4 +1113,8 @@ a {
       }
     }
   }
+}
+
+.bootstrap-datetimepicker-widget .datepicker-decades .decade {
+  line-height: 2 !important;
 }
