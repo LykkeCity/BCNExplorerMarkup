@@ -4,7 +4,7 @@
 
 .section--heading {
   background: $gray-5;
-  z-index:1;
+  z-index:auto;
   position: relative;
   min-height: 80px;
 
@@ -78,7 +78,7 @@
       .tabs_stack {
         overflow: hidden;
         overflow-x: auto;
-        padding: 0 0 20px;
+        padding: 0 15px 20px;
       }
     }
   }

@@ -553,6 +553,8 @@ a {
 }
 
 .transaction_panel {
+  font-feature-settings: "tnum";
+
   @include rem(border-top, 10px solid $gray-5);
 
   &__header {
@@ -1092,6 +1094,7 @@ a {
 
 .bootstrap-datetimepicker-widget.dropdown-menu {
   white-space: normal;
+  z-index:100;
 
   td span {
     @include rem(width, 64px);
