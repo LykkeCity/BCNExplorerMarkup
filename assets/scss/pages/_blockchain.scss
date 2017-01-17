@@ -1121,3 +1121,11 @@ a {
 .bootstrap-datetimepicker-widget .datepicker-decades .decade {
   line-height: 2 !important;
 }
+
+.header {
+  z-index: auto;
+
+  &.fixed {
+    z-index: 110;
+  }
+}
