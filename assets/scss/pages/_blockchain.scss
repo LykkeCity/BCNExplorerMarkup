@@ -65,6 +65,13 @@ a {
     p {
       @include rem(font-size, 16px)
     }
+
+    &.noborder {
+      margin-bottom: 0;
+      border-bottom: 0;
+
+      @include rem(padding-bottom, 25px);
+    }
   }
 
   .page__title {
@@ -119,10 +126,7 @@ a {
 
 .issuer_list {
   overflow: hidden;
-
-  &__item {
-    margin-bottom: -1px;
-  }
+  @include rem(margin-bottom, 10px);
 }
 
 

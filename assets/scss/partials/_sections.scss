@@ -100,12 +100,6 @@
     @include rem(font-size, 18px);
   }
 
-  .issuer_list__item:last-child .issuer {
-    tr:last-child td {
-      border-bottom: 0 !important;
-    }
-  }
-
   .issuer {
     &__img {
       @include rem(padding-top, 10px);
