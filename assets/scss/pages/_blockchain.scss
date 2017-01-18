@@ -581,6 +581,13 @@ a {
     @include rem(font-size, 18px);
     @include rem(line-height, 20px);
   }
+
+  .btn_show_changes {
+    @include rem(padding-top, 10px);
+    @include rem(margin-right, 10px);
+    @include rem(line-height, 16px);
+    @include rem(font-size, 16px);
+  }
 }
 
 .transaction_item {
@@ -655,7 +662,11 @@ a {
     .links_group {
       position: relative;
 
-      @include rem(padding-left, 40px);
+      @include rem(padding-left, 35px);
+
+      @media (min-width: $screen-mobile) {
+        @include rem(margin-right, -20px);
+      }
     }
 
     .transaction_prev_link {
@@ -1131,4 +1142,12 @@ a {
   &.fixed {
     z-index: 110;
   }
+}
+
+.btn_show_changes {
+  color: $gray-dark;
+}
+
+.btn--link {
+  border-radius: 0;
 }
