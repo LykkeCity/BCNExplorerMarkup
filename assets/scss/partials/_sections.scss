@@ -23,6 +23,10 @@
     }
   }
 
+  .btn_asset_download {
+    @include rem(margin-left, 2px);
+  }
+
   .tabs_stack, .tab_item {
     margin-bottom: 0;
   }
@@ -71,6 +75,7 @@
     .mobile-scroll {
       padding: 0;
       overflow: hidden;
+      margin: 0 -15px;
 
       @include rem(height, 45px);
 
