@@ -1210,8 +1210,6 @@ a {
 }
 
 .header {
-  z-index: auto;
-
   &.fixed {
     z-index: 110;
   }
