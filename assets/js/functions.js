@@ -70,3 +70,9 @@ $(function() {
     e.clearSelection();
   });
 });
+
+$('[data-toggle="popover"]').popover({
+  trigger: 'hover',
+  container: this.parentNode,
+  placement: 'auto'
+});

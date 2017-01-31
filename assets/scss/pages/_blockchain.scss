@@ -45,12 +45,21 @@ a {
 
     .input-search .form-control {
       padding-left: 35px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
 
     &.fixed {
       .header__logo {
         top: -2px !important;
       }
+    }
+  }
+
+  @media all and (max-width: $screen-mobile-old) {
+    &.fixed .input-search .form-control {
+      height: 30px;
     }
   }
 }
@@ -133,6 +142,13 @@ a {
   tr {
     td {
       white-space: normal;
+
+      &.td_truncate {
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
 
     th {
@@ -172,6 +188,11 @@ a {
 
   &.table--be_info {
     @include rem(font-size, 18px);
+
+    .truncate {
+      max-width: 370px;
+      float: none;
+    }
 
     tr {
       th {
@@ -221,6 +242,15 @@ a {
     @include rem(font-size, 24px);
   }
 
+  @media all and (max-width: $screen-tablet) {
+    &.table--be_info {
+      .truncate {
+        max-width: 92%;
+        max-width: 70vW;
+      }
+    }
+  }
+
   @media all and (max-width: $screen-mobile) {
     &.table--be_info {
       display: block;
@@ -229,6 +259,11 @@ a {
         display: block;
         width: 100% !important;
         padding: 0 !important;
+        max-width: none !important;
+      }
+
+      .truncate {
+        max-width: 100%;
       }
 
       tr {
@@ -427,13 +462,22 @@ a {
 .address_code {
   position: relative;
   word-break: break-all;
+  font-size: 0;
+
+  span, a {
+    vertical-align: baseline;
+
+    @include rem(font-size, 16px);
+  }
 
   .btn {
     position: relative;
     padding: 0;
     top: -1px;
+    vertical-align: baseline;
+    display: inline;
 
-    @include rem(margin-left, 4px);
+    @include rem(margin-left, 10px);
 
     .icon {
       @include rem(font-size, 19px);
@@ -445,9 +489,16 @@ a {
     color: $secondary;
     margin-bottom: 0;
 
-    @include rem(font-size, 28px);
     @include rem(line-height, 35px);
     @include rem(margin-bottom, 15px);
+
+    span {
+      @include rem(font-size, 28px);
+    }
+
+    .btn {
+      @include rem(top, -3px);
+    }
   }
 
   @media all and (max-width: $screen-mobile) {
@@ -462,26 +513,11 @@ a {
 
 .truncate {
   position: relative;
-
-  &::before, &::after {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 50%;
-    overflow: hidden;
-    white-space: pre;
-    pointer-events: all;
-  }
-
-  &::before {
-    content: attr(data-content-start);
-    text-overflow: ellipsis;
-  }
-
-  &::after {
-    content: attr(data-content-end);
-    text-overflow: ellipsis;
-    direction: rtl;
-  }
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  float: left;
 }
 
 .separator {
@@ -501,9 +537,12 @@ a {
     @include rem(padding, 28px 0);
 
     .address_code {
-      @include rem(font-size, 19px);
       @include rem(line-height, 30px);
       @include rem(margin-bottom, 5px);
+
+      a:not(.btn), span {
+        @include rem(font-size, 19px);
+      }
 
       a:not(.btn) {
         color: $blue;
@@ -583,10 +622,27 @@ a {
   }
 
   .btn_show_changes {
-    @include rem(padding-top, 10px);
+    text-transform: uppercase;
+    font-weight: $fw-semi;
+    display: inline-block;
+    vertical-align: middle;
+
+    @include rem(padding-top, 13px);
     @include rem(margin-right, 10px);
     @include rem(line-height, 16px);
-    @include rem(font-size, 16px);
+    @include rem(font-size, 13px);
+    @include rem(letter-spacing, 1.6px);
+  }
+
+  @media all and (max-width: $screen-mobile-tiny) {
+    .btn_show_changes {
+      letter-spacing: 0;
+      @include rem(padding-top, 6px);
+    }
+
+    .wallet_value {
+      @include rem(padding-top, 5px);
+    }
   }
 }
 
@@ -663,6 +719,10 @@ a {
       position: relative;
 
       @include rem(padding-left, 35px);
+
+      a {
+        @include clearfix;
+      }
 
       @media (min-width: $screen-mobile) {
         @include rem(margin-right, -20px);
@@ -775,6 +835,12 @@ a {
     border-bottom: 1px solid $border-alt;
 
     @include rem(height, 48px);
+  }
+
+  @media all and (max-width: $screen-mobile-tiny) {
+    &__img {
+      display: none;
+    }
   }
 }
 
@@ -1157,4 +1223,23 @@ a {
 
 .btn--link {
   border-radius: 0;
+}
+
+.btn_colored_coin {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+
+  @include rem(padding, 5px);
+  @include rem(top, -1px);
+
+  &__icon {
+    display: block;
+    background: url(../img/be/colored_icn.svg) no-repeat center;
+
+    @include rem(width, 16px);
+    @include rem(height, 16px);
+    @include background-size(cover);
+  }
 }

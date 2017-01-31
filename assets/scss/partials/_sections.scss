@@ -1,5 +1,13 @@
 .section--transactions {
   position: relative;
+
+  .section--heading {
+    ~ .transactions-list {
+      .panel:first-child {
+        border-top: 0;
+      }
+    }
+  }
 }
 
 .section--heading {
