@@ -72,54 +72,20 @@
   </div>
 </header>
 
-<article class="content page">
+<article class="content page page--issuer">
 
   <section class="section section--padding">
     <div class="container container--extend">
-      <h2>Assets directory</h2>
+      <h2>Lykke Corp</h2>
+      <p class="text-muted">
+        <a href="https://lykke.com" target="_blank">Issuer website</a>
+      </p>
     </div>
   </section>
 
-  <section class="section section--index">
-    <div class="index_bar_container">
-      <div class="container">
-        <div class="index_bar">
-          <div class="index_bar__inner">
-            <div class="index_bar__button">
-              <button type="button" class="btn btn--icon _show_search_block"><i class="icon icon--search"></i></button>
-            </div>
-            <ul class="index_bar__list list">
-              <li class="list__item"><a href="#demical">0–9</a></li>
-              <li class="list__item active"><a href="#A">A</a></li>
-              <li class="list__item"><a href="#B">B</a></li>
-              <li class="list__item"><a href="#C">C</a></li>
-              <li class="list__item"><a href="#D">D</a></li>
-              <li class="list__item"><a href="#E">E</a></li>
-              <li class="list__item"><a href="#F">F</a></li>
-              <li class="list__item"><a href="#G">G</a></li>
-              <li class="list__item"><a href="#H">H</a></li>
-              <li class="list__item"><a href="#I">I</a></li>
-              <li class="list__item"><a href="#J">J</a></li>
-              <li class="list__item"><a href="#K">K</a></li>
-              <li class="list__item"><a href="#L">L</a></li>
-              <li class="list__item"><a href="#M">M</a></li>
-              <li class="list__item"><a href="#N">N</a></li>
-              <li class="list__item"><a href="#O">O</a></li>
-              <li class="list__item"><a href="#P">P</a></li>
-              <li class="list__item"><a href="#Q">Q</a></li>
-              <li class="list__item"><a href="#R">R</a></li>
-              <li class="list__item"><a href="#S">S</a></li>
-              <li class="list__item"><a href="#T">T</a></li>
-              <li class="list__item"><a href="#U">U</a></li>
-              <li class="list__item"><a href="#V">V</a></li>
-              <li class="list__item"><a href="#W">W</a></li>
-              <li class="list__item"><a href="#X">X</a></li>
-              <li class="list__item"><a href="#Y">Y</a></li>
-              <li class="list__item"><a href="#Z">Z</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <section class="section section--heading">
+    <div class="container">
+      <h3>Assets <span>7</span></h3>
     </div>
   </section>
 
@@ -257,27 +223,6 @@
 <script src="js/vendor/clipboard.min.js"></script>
 <script src="js/vendor/in-view.min.js"></script>
 <script src="js/functions.js"></script>
-
-<script>
-  var searchBlock = $('.search_block'),
-      indexBar = $('.index_bar'),
-      barDisabledClass = 'index_bar--disabled',
-      searchActiveClass = 'search_block--show';
-
-  function showSearch() {
-    searchBlock.toggleClass(searchActiveClass);
-    indexBar.toggleClass(barDisabledClass)
-  }
-
-  function hideSearch() {
-    searchBlock.removeClass(searchActiveClass);
-    indexBar.removeClass(barDisabledClass)
-  }
-
-  $('._show_search_block').on('click', showSearch);
-  $('._hide_search_block').on('click', hideSearch);
-
-</script>
 
 </body>
 </html>

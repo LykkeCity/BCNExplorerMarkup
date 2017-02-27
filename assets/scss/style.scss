@@ -1,5 +1,10 @@
 @import "../../node_modules/LykkeFramework/assets/scss/style-minimal.scss";
 
+// Override default color
+$primary: #0da7fc;
+
+@import "../../node_modules/LykkeFramework/assets/scss/style-necessaries.scss";
+
 //vendor
 @import "../../node_modules/LykkeFramework/assets/scss/vendor/bootstrap-datetimepicker";
 

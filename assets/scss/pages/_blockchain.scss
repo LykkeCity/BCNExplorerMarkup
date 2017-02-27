@@ -3,8 +3,15 @@ a {
 }
 
 .header {
+  border-bottom: 1px solid #EBEDEF;
+
   .btn-link {
     margin-top: 2px;
+    color: $secondary !important;
+
+    &:hover {
+      color: $secondary !important;
+    }
   }
 
   .header__logo {
@@ -96,6 +103,22 @@ a {
       border-bottom: 0;
 
       @include rem(padding-bottom, 25px);
+    }
+  }
+
+  &--issuer {
+    .text-muted {
+      margin-bottom: 0;
+
+      @include rem(font-size, 16px);
+    }
+
+    .section--padding {
+      @include rem(padding-bottom, 30px !important);
+    }
+
+    .section--heading {
+      @include rem(margin-bottom, 30px !important);
     }
   }
 
@@ -212,6 +235,16 @@ a {
         @include rem(font-size, 18px);
         @include rem(line-height, 30px);
         @include rem(margin, 4px 0);
+      }
+
+      .label {
+        vertical-align: middle;
+
+        @include rem(margin-left, 4px);
+      }
+
+      a {
+        color: $primary;
       }
 
       td, th {
@@ -534,11 +567,10 @@ a {
 
 .panel {
   &__header {
-    @include rem(padding, 28px 0);
+    @include rem(padding, 24px 0);
 
     .address_code {
       @include rem(line-height, 30px);
-      @include rem(margin-bottom, 5px);
 
       a:not(.btn), span {
         @include rem(font-size, 19px);
@@ -546,10 +578,6 @@ a {
 
       a:not(.btn) {
         color: $blue;
-
-        &:hover {
-          color: $secondary;
-        }
       }
     }
 
@@ -579,6 +607,7 @@ a {
     .confirmation_label {
       margin-top: 0;
       text-align: left;
+      float: left;
 
       @include rem(margin-bottom, 5px)
     }
@@ -597,7 +626,7 @@ a {
 .transaction_panel {
   font-feature-settings: "tnum";
 
-  @include rem(border-top, 10px solid $gray-5);
+  @include rem(border-top, 20px solid #F5F6F7);
 
   &__header {
     display: table;
@@ -621,25 +650,7 @@ a {
     @include rem(line-height, 20px);
   }
 
-  .btn_show_changes {
-    text-transform: uppercase;
-    font-weight: $fw-semi;
-    display: inline-block;
-    vertical-align: middle;
-
-    @include rem(padding-top, 13px);
-    @include rem(margin-right, 10px);
-    @include rem(line-height, 16px);
-    @include rem(font-size, 13px);
-    @include rem(letter-spacing, 1.6px);
-  }
-
   @media all and (max-width: $screen-mobile-tiny) {
-    .btn_show_changes {
-      letter-spacing: 0;
-      @include rem(padding-top, 6px);
-    }
-
     .wallet_value {
       @include rem(padding-top, 5px);
     }
@@ -767,9 +778,10 @@ a {
   display: inline-block;
   vertical-align: middle;
 
-  @include rem(padding, 9px);
+  @include rem(padding, 6px);
 
   .icon {
+    color: $primary;
     @include rem(font-size, 24px)
   }
 }
@@ -845,7 +857,7 @@ a {
 
 .show_more {
   margin-bottom: 0;
-  background: $gray-5;
+  background: #F5F6F7;
 
   @include rem(padding, 25px);
 }
@@ -950,6 +962,10 @@ a {
 
     &:last-child {
       margin-left: 0;
+    }
+
+    .form-control {
+      border: 0;
     }
     
     .control-label--inner {
@@ -1140,7 +1156,20 @@ a {
     content: '?';
     font-weight: $fw-semi;
     font-family: $ff !important;
-    font-size: 18px;
+
+    @include rem(font-size, 18px);
+  }
+}
+
+.icon_question {
+  font-style: normal;
+
+  &:before {
+    content: '?';
+    font-weight: $fw-semi;
+    font-family: $ff !important;
+
+    @include rem(font-size, 14px);
   }
 }
 
@@ -1216,6 +1245,21 @@ a {
 
 .btn_show_changes {
   color: $gray-dark;
+  text-transform: uppercase;
+  font-weight: $fw-semi;
+  position: relative;
+  z-index: 10;
+
+  @include rem(margin-right, -6px);
+  @include rem(padding, 6px);
+  @include rem(line-height, 16px);
+  @include rem(font-size, 13px);
+  @include rem(letter-spacing, 1.6px);
+
+  @media all and (max-width: $screen-mobile-tiny) {
+    letter-spacing: 0;
+    @include rem(padding-top, 6px);
+  }
 }
 
 .btn--link {
@@ -1239,4 +1283,55 @@ a {
     @include rem(height, 16px);
     @include background-size(cover);
   }
+}
+
+.page__title {
+  .label {
+    vertical-align: middle;
+    font-weight: $fw-semi !important;
+    display: inline-block;
+  }
+
+  .check {
+    vertical-align: baseline;
+    position: relative;
+    top: -2px;
+
+    @include rem(width, 20px);
+    @include rem(height, 20px);
+
+    &:before {
+      @include rem(line-height, 22px);
+    }
+
+    &--green {
+      &:before {
+        @include rem(font-size, 7px);
+      }
+    }
+
+    &--yellow {
+      &:before {
+        @include rem(font-size, 18px);
+      }
+    }
+  }
+}
+
+.page_border {
+  display: none;
+}
+
+.label {
+  .icon--check {
+    top: 0;
+    position: relative;
+
+    @include rem(font-size, 8px);
+    @include rem(margin-right, 2px)
+  }
+}
+
+.check {
+  font-style: normal;
 }

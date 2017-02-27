@@ -37,7 +37,7 @@ $(function() {
 
 $(function() {
   //caches a jQuery object containing the header element
-  var header = $(".header");
+/*  var header = $(".header");
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
@@ -46,7 +46,7 @@ $(function() {
     } else {
       header.removeClass("fixed")
     }
-  });
+  });*/
 });
 
 
@@ -71,8 +71,15 @@ $(function() {
   });
 });
 
+
+var is_touch_device = ("ontouchstart" in window) || window.DocumentTouch && document instanceof DocumentTouch;
+
 $('[data-toggle="popover"]').popover({
-  trigger: 'hover',
+  trigger: is_touch_device ? 'click' : 'hover',
   container: this.parentNode,
   placement: 'auto'
+});
+
+$(document).on('blur','[data-toggle="popover"]', function() {
+  $(this).popover('hide');
 });
