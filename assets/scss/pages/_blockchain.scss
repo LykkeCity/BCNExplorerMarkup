@@ -1285,6 +1285,14 @@ a {
   }
 }
 
+.label {
+  h2 & {
+    vertical-align: middle;
+    font-weight: $fw-semi !important;
+    display: inline-block;
+  }
+}
+
 .page__title {
   .label {
     vertical-align: middle;
