@@ -101,11 +101,11 @@ function initHeader() {
     $('.sidebar_menu').addClass('sidebar_menu--open');
   });
 
-  $('.sidebar_menu, .header_search, .header').on('click', function(e) {
+  $('.sidebar_menu, .header_search').on('click', function(e) {
     e.stopPropagation();
   });
 
-  $('body, .btn_close_menu, .menu_overlay, .btn_close_header').on('click', function() {
+  $('body, .btn_close_menu, .menu_overlay, .btn_close_header').on('click', function(e) {
     $('body').removeClass('body--menu_opened body--search_showed');
     $('.sidebar_menu').removeClass('sidebar_menu--open');
     $('.header_search').removeClass('header_search--show');
