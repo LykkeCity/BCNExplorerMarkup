@@ -2,75 +2,6 @@ a {
   color: inherit;
 }
 
-.header {
-  border-bottom: 1px solid #EBEDEF;
-
-  .btn-link {
-    margin-top: 2px;
-    color: $secondary !important;
-
-    &:hover {
-      color: $secondary !important;
-    }
-  }
-
-  .header__logo {
-    line-height: 45px;
-  }
-
-  @media (max-width: $screen-landscape) {
-    .btn-link {
-      margin-top: 0;
-    }
-
-    .header__logo {
-      line-height: 40px;
-    }
-  }
-
-  @media (max-width: $screen-mobile-old) {
-    .btn-link {
-      margin-top: 11px;
-      padding: 0;
-    }
-
-    &__logo {
-      top: 5px !important;
-    }
-
-    &.fixed {
-      .btn-link {
-        margin-top: 1px;
-      }
-    }
-  }
-
-  @media (max-width: $screen-mobile) {
-    &__logo {
-      top: 2px !important;
-    }
-
-    .input-search .form-control {
-      padding-left: 35px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-
-    &.fixed {
-      .header__logo {
-        top: -2px !important;
-      }
-    }
-  }
-
-  @media all and (max-width: $screen-mobile-old) {
-    &.fixed .input-search .form-control {
-      height: 30px;
-    }
-  }
-}
-
 .page {
   .page__header {
     border-bottom: 1px solid $border-alt;
@@ -157,7 +88,19 @@ a {
 
 .issuer_list {
   overflow: hidden;
+  font-size: 0;
+
   @include rem(margin-bottom, 10px);
+
+  &__item {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.issuer__content {
+  @include rem(padding-right, 15px);
 }
 
 
@@ -961,7 +904,7 @@ a {
     @include rem(margin-right, 16px);
 
     &:last-child {
-      margin-left: 0;
+      margin-right: 0;
     }
 
     .form-control {
@@ -1083,9 +1026,19 @@ a {
 
   tr {
     td, th {
+      width: 140px;
+
       @include rem(font-size, 16px);
       @include rem(padding, 12px 30px 12px 0);
     }
+  }
+
+  ._ticker {
+    width: 100px;
+  }
+
+  ._issuer {
+    width: 300px;
   }
 
   .check {
@@ -1098,45 +1051,63 @@ a {
     &:before {
       @include rem(line-height, 22px);
     }
-
-    + .ticker_name {
-      @include rem(padding-left, 30px);
-    }
   }
 
   .ticker_name {
     display: block;
     white-space: normal;
-
+    overflow: hidden;
   }
 
-  .issuer__name {
-    font-weight: normal;
-    white-space: normal;
-    word-break: break-all;
-    word-break: break-word;
+  .issuer {
+    width: 45%;
 
-    @include rem(line-height, 24px);
-    @include rem(margin-bottom, 4px);
+    &__img {
+      position: relative;
+      overflow: visible;
+      border-bottom: 0 !important;
+      border-radius: 4px;
+
+      @include rem(padding-right, 15px !important);
+      @include rem(width, 63px);
+
+      img {
+        border-radius: 4px;
+        max-width: none;
+        box-shadow: inset 0 0 0 1px rgba($secondary, .1);
+
+        @include rem(width, 48px);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        height: 20px;
+        background: #fff;
+        width: 100%;
+        left: 0;
+        z-index: 10;
+      }
+    }
+
+    &__content {
+      border-bottom: 0;
+    }
+
+    &__name {
+      font-weight: normal;
+      white-space: normal;
+      word-break: break-all;
+      word-break: break-word;
+
+      @include rem(line-height, 24px);
+      @include rem(margin-bottom, 4px);
+    }
   }
 
   .text-muted {
     @include rem(font-size, 16px);
-  }
-
-  .issuer__img {
-    border-bottom: 0 !important;
-    border-radius: 4px;
-    overflow: hidden;
-
-    @include rem(padding-right, 15px !important);
-    @include rem(width, 63px);
-
-    img {
-      border-radius: 4px;
-      width: 100%;
-      box-shadow: inset 0 0 0 1px rgba($secondary, .1);
-    }
   }
 
   @media all and (max-width: $screen-tablet) {
@@ -1342,4 +1313,23 @@ a {
 
 .check {
   font-style: normal;
+}
+
+.spinner_container {
+  .bodymovin {
+    @include rem(width, 50px);
+    @include rem(height, 50px);
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hint_message {
+  text-align: center;
+  color: rgba($secondary, .6);
+
+  @include rem(padding, 10px 0);
+  @include rem(margin-bottom, 30px);
+  @include rem(font-size, 20px);
 }

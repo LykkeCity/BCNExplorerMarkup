@@ -24,7 +24,7 @@
 
     @include rem(font-size, 22px);
 
-    span {
+    > span {
       font-weight: normal;
 
       @include rem(margin-left, 5px)
@@ -110,13 +110,17 @@
   @include rem(padding, 35px 0);
 
   .wallet_value {
-    @include rem(line-height, 30px);
+    @include rem(line-height, 20px);
     @include rem(font-size, 18px);
   }
 
   .issuer {
     &__img {
       @include rem(padding-top, 10px);
+    }
+
+    &__name {
+      @include rem(line-height, 20px);
     }
 
     &__content {
