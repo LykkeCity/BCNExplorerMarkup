@@ -39,6 +39,12 @@
     margin-bottom: 0;
   }
 
+  ~ .transactions-list {
+    .transactions-container:first-child .panel:first-child {
+      border-top: 0;
+    }
+  }
+
   + .section--transactions {
     .panel:first-child, .panel:first-of-type {
       border-top: 0;

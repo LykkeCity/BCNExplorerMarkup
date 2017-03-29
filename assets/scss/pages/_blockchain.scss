@@ -1333,3 +1333,7 @@ a {
   @include rem(margin-bottom, 30px);
   @include rem(font-size, 20px);
 }
+
+.nav-tabs > li > a:not(.btn) {
+  background: transparent !important;
+}
