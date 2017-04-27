@@ -1348,3 +1348,13 @@ a {
   -moz-appearance: none;
   appearance: none;
 }
+
+@media (max-width: 767px) {
+  .footer .social--footer_alt > li {
+    margin-left: 6px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
