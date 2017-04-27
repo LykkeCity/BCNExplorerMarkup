@@ -587,6 +587,7 @@ a {
     color: $text;
     letter-spacing: 0.2px;
     text-align: right;
+    white-space: nowrap;
 
     @include rem(padding-top, 10px);
     @include rem(font-size, 18px);
@@ -1042,7 +1043,9 @@ a {
   }
 
   .check {
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     @include rem(width, 20px);
     @include rem(height, 20px);
@@ -1054,13 +1057,15 @@ a {
   }
 
   .ticker_name {
-    display: block;
     white-space: normal;
-    overflow: hidden;
+    min-width: 100px;
+
+    @include rem(padding-left, 30px);
   }
 
   .issuer {
     width: 45%;
+    padding-right: 0;
 
     &__img {
       position: relative;
@@ -1336,4 +1341,10 @@ a {
 
 .nav-tabs > li > a:not(.btn) {
   background: transparent !important;
+}
+
+.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

@@ -24,9 +24,11 @@
 
     @include rem(font-size, 22px);
 
-    > span {
+    span {
       font-weight: normal;
+    }
 
+    > span {
       @include rem(margin-left, 5px)
     }
   }
@@ -133,6 +135,7 @@
       @include rem(padding-top, 10px);
       @include rem(padding-bottom, 10px);
       @include rem(height, 70px);
+      @include rem(font-size, 16px);
     }
   }
 }

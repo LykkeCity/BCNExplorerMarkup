@@ -63,13 +63,17 @@ function initClipboard() {
 
 function initPopover() {
   $('[data-toggle="popover"]').popover({
-    trigger: is_touch_device ? 'click' : 'hover',
-    container: this.parentNode,
-    placement: 'auto'
-  });
+      trigger: is_touch_device ? 'click' : 'hover',
+      container: this.parentNode,
+      placement: 'auto'
+    });
 
-  $(document).on('blur','[data-toggle="popover"]', function() {
-    $(this).popover('hide');
+  $('body').on('click touchstart', function (e) {
+    $('[data-toggle="popover"]').each(function () {
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('[data-toggle="popover"]').has(e.target).length === 0) {
+        $(this).popover('hide');
+      }
+    });
   });
 }
 
