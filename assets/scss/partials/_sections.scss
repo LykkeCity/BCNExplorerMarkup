@@ -26,6 +26,10 @@
 
     span {
       font-weight: normal;
+
+      + span {
+        margin-left: 0 !important;
+      }
     }
 
     > span {
