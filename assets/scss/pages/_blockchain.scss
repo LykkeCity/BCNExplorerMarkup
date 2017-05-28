@@ -594,6 +594,21 @@ a {
     @include rem(line-height, 20px);
   }
 
+  .popover_control {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    line-height: 1.88;
+    color: #657180;
+
+    @include rem(line-height, 18px);
+    @include rem(font-size, 16px);
+
+    .middot {
+      @include rem(margin, 0 4px);
+    }
+  }
+
   @media all and (max-width: $screen-mobile-tiny) {
     .wallet_value {
       @include rem(padding-top, 5px);
@@ -1355,6 +1370,38 @@ a {
 
     &:first-child {
       margin-left: 0;
+    }
+  }
+}
+
+.graph {
+  position: relative;
+
+  &--multisig {
+    line-height: 0;
+    font-size: 0;
+
+    @include rem(height, 50px);
+    @include rem(width, 50px);
+
+    .graph_candle {
+      height: 100%;
+      display: inline-block;
+      vertical-align: bottom;
+      position: relative;
+
+      @include rem(width, 4px);
+      @include rem(margin, 0 2px);
+
+      span {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-radius: $border-radius;
+        background-color: $primary;
+      }
     }
   }
 }

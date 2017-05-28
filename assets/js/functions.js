@@ -1,11 +1,11 @@
 var wH = $(window).height(),
-    wW = $(window).width(),
-    ua = navigator.userAgent,
-    touchendOrClick = (ua.match(/iPad|iPhone|iPad/i)) ? "touchend" : "click",
+  wW = $(window).width(),
+  ua = navigator.userAgent,
+  touchendOrClick = (ua.match(/iPad|iPhone|iPad/i)) ? "touchend" : "click",
 
-    deviceAgent = navigator.userAgent.toLowerCase(),
-    isMobile = deviceAgent.match(/(iphone|ipod|ipad)/),
-    is_touch_device = ("ontouchstart" in window) || window.DocumentTouch && document instanceof DocumentTouch;
+  deviceAgent = navigator.userAgent.toLowerCase(),
+  isMobile = deviceAgent.match(/(iphone|ipod|ipad)/),
+  is_touch_device = ("ontouchstart" in window) || window.DocumentTouch && document instanceof DocumentTouch;
 
 FastClick.attach(document.body);
 
@@ -63,10 +63,15 @@ function initClipboard() {
 
 function initPopover() {
   $('[data-toggle="popover"]').popover({
-      trigger: is_touch_device ? 'click' : 'hover',
-      container: this.parentNode,
-      placement: 'auto'
-    });
+    trigger: is_touch_device ? 'click' : 'click',
+    container: this.parentNode,
+    html: true,
+    content: function () {
+      if (!$(this).data('data-content')) {
+        return $(this).next('.popover-content').html();
+      }
+    }
+  });
 
   $('body').on('click touchstart', function (e) {
     $('[data-toggle="popover"]').each(function () {
