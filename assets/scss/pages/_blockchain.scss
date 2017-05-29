@@ -87,7 +87,6 @@ a {
 }
 
 .issuer_list {
-  overflow: hidden;
   font-size: 0;
 
   @include rem(margin-bottom, 10px);
@@ -96,6 +95,14 @@ a {
     float: none;
     display: inline-block;
     vertical-align: top;
+  }
+
+  .issuer__content {
+    overflow: visible;
+  }
+
+  .text-muted {
+    margin-top: 2px;
   }
 }
 
@@ -592,21 +599,6 @@ a {
     @include rem(padding-top, 10px);
     @include rem(font-size, 18px);
     @include rem(line-height, 20px);
-  }
-
-  .popover_control {
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: normal;
-    line-height: 1.88;
-    color: #657180;
-
-    @include rem(line-height, 18px);
-    @include rem(font-size, 16px);
-
-    .middot {
-      @include rem(margin, 0 4px);
-    }
   }
 
   @media all and (max-width: $screen-mobile-tiny) {
@@ -1380,6 +1372,7 @@ a {
   &--multisig {
     line-height: 0;
     font-size: 0;
+    white-space: nowrap;
 
     @include rem(height, 50px);
     @include rem(width, 50px);
@@ -1402,6 +1395,25 @@ a {
         border-radius: $border-radius;
         background-color: $primary;
       }
+    }
+  }
+}
+
+.popover_control {
+  .issuer & {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #657180;
+    position: relative;
+    top: -1px;
+
+    @include rem(line-height, 18px);
+    @include rem(font-size, 16px);
+
+    .middot {
+      @include rem(margin, 0 4px);
     }
   }
 }

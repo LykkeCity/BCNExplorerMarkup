@@ -20,10 +20,6 @@
 
 
 .multisig_popover {
-  .popover {
-    max-width: 100%;
-  }
-
   h4, h3 {
     @include rem(margin-bottom, 18px);
   }
