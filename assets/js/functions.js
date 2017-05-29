@@ -63,7 +63,7 @@ function initClipboard() {
 
 function initPopover() {
   $('[data-toggle="popover"]').popover({
-    trigger: is_touch_device ? 'click' : 'click',
+    trigger: 'click',
     container: this.parentNode,
     html: true,
     content: function () {

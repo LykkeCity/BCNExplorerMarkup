@@ -4,6 +4,15 @@
   max-width: none;
 
   @include rem(width, 520px);
+
+  .btn_colored_coin & {
+    width: auto;
+  }
+}
+
+.btn_colored_coin ~ .popover {
+  width: auto;
+  text-align: center;
 }
 
 .popover-content {
