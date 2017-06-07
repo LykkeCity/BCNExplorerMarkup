@@ -162,6 +162,8 @@ a {
   &.table--be_info {
     @include rem(font-size, 18px);
 
+    table-layout: fixed;
+
     .truncate {
       max-width: 370px;
       float: none;
@@ -185,6 +187,9 @@ a {
         @include rem(font-size, 18px);
         @include rem(line-height, 30px);
         @include rem(margin, 4px 0);
+
+        word-break: break-all;
+        word-break: break-word;
       }
 
       .label {
@@ -1068,6 +1073,7 @@ a {
     min-width: 100px;
 
     @include rem(padding-left, 30px);
+    @include rem(min-height, 20px);
   }
 
   .issuer {
@@ -1112,7 +1118,12 @@ a {
       white-space: normal;
       word-break: break-all;
       word-break: break-word;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 320px;
+      text-overflow: ellipsis;
 
+      @include rem(max-width, 320px);
       @include rem(line-height, 24px);
       @include rem(margin-bottom, 4px);
     }
@@ -1277,6 +1288,9 @@ a {
 }
 
 .page__title {
+  word-break: break-all;
+  word-break: break-word;
+
   .label {
     vertical-align: middle;
     font-weight: $fw-semi !important;
@@ -1415,5 +1429,11 @@ a {
     .middot {
       @include rem(margin, 0 4px);
     }
+  }
+}
+
+.transactions-container {
+  .show_more {
+    @include rem(margin-bottom, -15px)
   }
 }
