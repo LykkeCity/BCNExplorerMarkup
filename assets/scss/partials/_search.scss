@@ -130,3 +130,40 @@
     color: $secondary !important;
   }
 }
+
+.header_search {
+  @media all and (max-width: $screen-tablet) {
+    position: fixed;
+
+    @include rem(height, 90px);
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    @include rem(height, 95px);
+    @include rem(padding, 30px 0);
+  }
+
+  @media all and (max-width: $screen-mobile) {
+    @include rem(top, 79px);
+    @include rem(height, 80px);
+    @include rem(padding, 20px 0);
+  }
+
+  @media all and (min-width: $screen-tablet + 1) {
+    display: block;
+    float: right;
+    width: auto;
+    position: relative;
+    padding: 0;
+
+    &__btn {
+      left: 5px;
+    }
+
+    .form-control {
+      width: 302px;
+      border-radius: $border-radius;
+      border: 1px solid $border;
+    }
+  }
+}
