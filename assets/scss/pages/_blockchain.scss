@@ -812,7 +812,7 @@ a {
 }
 
 .show_more {
-  margin-bottom: 0;
+  margin-bottom: -1px;
   background: #F5F6F7;
 
   @include rem(padding, 25px);
