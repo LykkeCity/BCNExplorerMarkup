@@ -2,6 +2,7 @@
   "name": "LykkeBlockchainExplorer",
   "private": true,
   "devDependencies": {
+    "LykkeFramework": "^0.3.40",
     "compass-mixins": "0.12.10",
     "del": "2.2.0",
     "gulp": "3.9.0",
@@ -10,10 +11,9 @@
     "gulp-livereload": "3.8.1",
     "gulp-minify-html": "1.0.4",
     "gulp-rev": "6.0.1",
-    "gulp-sass": "2.1.1",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "1.5.1",
-    "gulp-usemin": "0.3.16",
-    "LykkeFramework": "latest"
+    "gulp-usemin": "0.3.16"
   },
   "dependencies": {
     "clipboard": "^1.5.15",

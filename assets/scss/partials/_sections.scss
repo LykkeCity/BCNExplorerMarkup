@@ -1,13 +1,5 @@
 .section--transactions {
   position: relative;
-
-  .section--heading {
-    ~ .transactions-list {
-      .panel:first-child {
-        border-top: 0;
-      }
-    }
-  }
 }
 
 .section--heading {
@@ -43,6 +35,12 @@
 
   .tabs_stack, .tab_item {
     margin-bottom: 0;
+  }
+
+  ~ .transactions-list {
+    .panel:first-child {
+      border-top: 0;
+    }
   }
 
   ~ .transactions-list {

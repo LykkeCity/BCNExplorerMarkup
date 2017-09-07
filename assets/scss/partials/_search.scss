@@ -139,22 +139,31 @@
   }
 
   @media all and (max-width: $screen-landscape) {
-    @include rem(height, 95px);
+    height: 80px;
+
     @include rem(padding, 30px 0);
   }
 
   @media all and (max-width: $screen-mobile) {
-    @include rem(top, 79px);
-    @include rem(height, 80px);
+    top: 56px;
+    height: 60px;
+
     @include rem(padding, 20px 0);
   }
 
-  @media all and (min-width: $screen-tablet + 1) {
+  @media all and (min-width: $screen-landscape + 1) {
     display: block;
     float: right;
     width: auto;
     position: relative;
     padding: 0;
+    height: auto;
+    max-width: 100%;
+    margin-top: 1px;
+
+    .container {
+      padding: 0;
+    }
 
     &__btn {
       left: 5px;
@@ -164,6 +173,16 @@
       width: 302px;
       border-radius: $border-radius;
       border: 1px solid $border;
+    }
+  }
+}
+
+@media (max-width: $screen-tablet) {
+  .header_user__img {
+    margin-right: 0;
+
+    + .header_login__title {
+      display: none;
     }
   }
 }
