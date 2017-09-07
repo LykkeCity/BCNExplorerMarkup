@@ -1370,12 +1370,17 @@ a {
   appearance: none;
 }
 
-@media (max-width: 767px) {
-  .footer .social--footer_alt > li {
-    margin-left: 6px;
+@media (max-width: $screen-landscape) {
+  .footer .social--footer_alt {
+    max-width: 220px;
+    margin: 0 auto;
 
-    &:first-child {
-      margin-left: 0;
+    > li {
+      margin: 0 6px 6px;
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 }
@@ -1434,6 +1439,6 @@ a {
 
 .transactions-container {
   .show_more {
-    @include rem(margin-bottom, -16px)
+    margin-bottom: -16px;
   }
 }
