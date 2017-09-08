@@ -1370,18 +1370,35 @@ a {
   appearance: none;
 }
 
+.social--footer_alt > li,
+.social--header > li {
+  @include rem(margin-left, 20px);
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: $screen-landscape) {
+  .footer .social--footer_alt {
+    > li {
+      margin: 0 6px 6px;
+    }
+  }
+}
+
+@media (max-width: $screen-mobile-tiny) {
   .footer .social--footer_alt {
     max-width: 220px;
     margin: 0 auto;
 
-    > li {
-      margin: 0 6px 6px;
-
-      &:first-child {
-        margin-left: 0;
-      }
+    .icon {
+      font-size: 18px;
     }
+  }
+
+  .footer__copy {
+    padding: 10px 0;
   }
 }
 
