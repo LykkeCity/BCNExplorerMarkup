@@ -923,7 +923,7 @@ a {
     .form-control {
       border: 0;
     }
-    
+
     .control-label--inner {
       position: absolute;
       top: 50%;
@@ -1331,9 +1331,9 @@ a {
   .icon--check {
     top: 0;
     position: relative;
+    margin-right: 0;
 
     @include rem(font-size, 8px);
-    @include rem(margin-right, 2px)
   }
 }
 
@@ -1441,15 +1441,55 @@ a {
     vertical-align: middle;
     font-weight: normal;
     line-height: 1.2;
-    color: #657180;
     position: relative;
     top: -1px;
 
-    @include rem(line-height, 18px);
-    @include rem(font-size, 16px);
 
     .middot {
       @include rem(margin, 0 4px);
+    }
+
+    [data-toggle="popover"] {
+      display: block;
+
+      &:after {
+        font-family: 'icon', sans-serif;
+        content: "\e968";
+        color: #afb6be;
+        position: absolute;
+        top: 50%;
+        opacity: 0;
+        pointer-events: none;
+
+        @include transition(opacity $transition-default);
+        @include rem(right, -10px);
+        @include rem(font-size, 10px);
+        @include rem(margin-top, -5px);
+      }
+    }
+
+    .popover {
+      right: -20px !important;
+      left: auto !important;
+      margin-top: 15px;
+
+      &.bottom > .arrow {
+        left: 85% !important;
+      }
+    }
+
+    @media all and (min-width: $screen-landscape) {
+      [data-toggle="popover"] {
+        &:hover,
+        &[aria-describedby] {
+          @include rem(padding-right, 6px);
+
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+
     }
   }
 }
